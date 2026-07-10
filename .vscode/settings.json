@@ -1,0 +1,19 @@
+{
+  "files.associations": {
+    "*.njk": "nunjucks"
+  },
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[nunjucks]": {
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

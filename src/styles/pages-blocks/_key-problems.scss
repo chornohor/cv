@@ -1,0 +1,28 @@
+@use "../settings/breakpoints" as bp;
+.key-problems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  @include bp.media-down(lg) {
+    gap: 16px;
+  }
+}
+.key-problems-item {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  font-family: "Inter", var(--ff-base);
+  gap: 24px;
+  font-weight: 700;
+
+  @include bp.media-down(lg) {
+    font-weight: 400;
+    font-family: var(--ff-base);
+    flex-direction: column;
+    padding: 16px 24px;
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../settings/breakpoints" as bp;
+:root {
+  --space-section-x: 120px;
+  --space-section-y: 60px;
+
+  @include bp.media-down(lg) {
+    --space-section-x: 24px;
+    --space-section-y: 32px;
+  }
+}

@@ -1,0 +1,98 @@
+@use "../settings/breakpoints" as bp;
+
+.footer {
+  width: 100%;
+  max-width: calc(1200px + calc(var(--space-section-x) * 2));
+  margin: auto;
+  padding: 60px var(--space-section-x);
+  display: grid;
+  gap: 60px 0;
+  grid-template-areas:
+    "email email email cv cv"
+    "contact contact contact social social" "copyr copyr links links links";
+  &__email {
+    grid-area: email;
+    line-break: anywhere;
+    .link {
+      font-size: 38px;
+      font-weight: 600;
+      @include bp.media-down(lg) {
+        font-size: 32px;
+      }
+    }
+  }
+  &__cv {
+    grid-area: cv;
+    align-self: end;
+    text-align: right;
+
+    @include bp.media-down(lg) {
+      text-align: left;
+    }
+  }
+  &__contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__social {
+    grid-area: social;
+    align-self: center;
+    @include bp.media-down(lg) {
+      align-self: start;
+    }
+  }
+  &__copyr {
+    grid-area: copyr;
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+    span {
+      opacity: 0.5;
+    }
+    @include bp.media-down(lg) {
+      text-align: center;
+      padding-top: 16px;
+    }
+  }
+  &__links {
+    grid-area: links;
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+    @include bp.media-down(lg) {
+      border-top: none;
+      align-self: start;
+      padding-top: 0;
+    }
+  }
+
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @include bp.media-down(lg) {
+    padding: 0 24px 32px;
+    gap: 42px 0;
+    grid-template-areas:
+      "email email"
+      "cv cv"
+      "contact contact"
+      "links social"
+      "copyr copyr";
+  }
+}
+.footer__nav {
+}
+.footer__nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 60px;
+
+  @include bp.media-down(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}

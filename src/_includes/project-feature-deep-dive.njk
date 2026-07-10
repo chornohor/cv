@@ -1,0 +1,48 @@
+{% macro projectFeatureDeepDive(feature) %}
+	<section class="section section--42-42-0-72 {{ feature.specclass }}" data-feature-deep-dive>
+		<h2>{{ feature.title }}</h2>
+		<div class="feature__naviagtion">
+			<div class="feature__track">
+				{% for project in feature.projects %}
+					<span class="feature__track__item{% if loop.first %} feature__track__item--active{% endif %}" data-feature-track-item></span>
+				{% endfor %}
+			</div>
+			<div class="feature__buttons">
+				<button class="circle-label circle-label--outlined" type="button" aria-label="Previous feature" data-feature-prev>
+					<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0929 4.47209C14.5068 4.06529 15.178 4.06529 15.5919 4.47209C16.0058 4.87889 16.0058 5.53843 15.5919 5.94523L9.98174 11.4587L15.5919 16.9721C16.0058 17.3789 16.0058 18.0384 15.5919 18.4452C15.178 18.852 14.5068 18.852 14.0929 18.4452L7.73326 12.1952C7.31933 11.7884 7.31933 11.1289 7.73326 10.7221L14.0929 4.47209Z" fill="currentColor"/>
+					</svg>
+				</button>
+				<button class="circle-label{% if feature.projects.length <= 1 %} circle-label--outlined{% endif %}" type="button" aria-label="Next feature" data-feature-next>
+					<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0929 4.47209C14.5068 4.06529 15.178 4.06529 15.5919 4.47209C16.0058 4.87889 16.0058 5.53843 15.5919 5.94523L9.98174 11.4587L15.5919 16.9721C16.0058 17.3789 16.0058 18.0384 15.5919 18.4452C15.178 18.852 14.5068 18.852 14.0929 18.4452L7.73326 12.1952C7.31933 11.7884 7.31933 11.1289 7.73326 10.7221L14.0929 4.47209Z" fill="currentColor"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		{% for project in feature.projects %}
+			<div data-feature-project{% if not loop.first %} hidden{% endif %}>
+				<div class="feature__header">
+					<h2>{{ project.title | safe }}</h2>
+					<p>{{ project.description }}</p>
+				</div>
+				<img class="feature__image" src="{{ project.image.src }}" alt="{{ project.image.alt or project.trackTitle or project.title | striptags }}">
+				<div class="feature__info ">
+					{% for group in project.groups %}
+						<div>
+							<div class="circle-label">
+								<img src="{{ group.icon }}" alt="{{ group.iconAlt or group.title }}">
+							</div>
+							<h3>{{ group.title }}</h3>
+							<ul>
+								{% for item in group.items %}
+									<li>{{ item }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+{% endmacro %}

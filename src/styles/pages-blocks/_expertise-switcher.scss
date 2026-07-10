@@ -1,0 +1,117 @@
+@use "../settings/breakpoints" as bp;
+
+.expertise-switcher {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.expertise-switcher__item {
+  display: contents;
+}
+
+.expertise-switcher__tab {
+  grid-column: 1;
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #e9eaea;
+  font: inherit;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 160ms ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
+
+.expertise-switcher__item.is-active .expertise-switcher__tab {
+  color: var(--color-text);
+}
+
+.expertise-switcher__panel {
+  display: none;
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  max-width: 420px;
+}
+
+.expertise-switcher__item.is-active .expertise-switcher__panel {
+  display: block;
+}
+
+.expertise-switcher__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 42px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  img {
+    width: 21px;
+  }
+}
+
+.expertise-switcher__panel h3 {
+  margin: 0 0 24px;
+  font-size: 24px;
+}
+
+.expertise-switcher__panel p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+@include bp.media-down(lg) {
+  .expertise-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    text-align: center;
+  }
+
+  .expertise-switcher__item {
+    display: block;
+    width: 100%;
+  }
+
+  .expertise-switcher__tab {
+    width: 100%;
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .expertise-switcher__item.is-active .expertise-switcher__tab {
+    display: none;
+  }
+
+  .expertise-switcher__panel {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .expertise-switcher__icon {
+    margin-bottom: 28px;
+  }
+  .expertise-switcher__panel h3 {
+    margin: 0 0 24px;
+    font-size: 20px;
+  }
+}

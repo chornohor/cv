@@ -1,0 +1,136 @@
+---
+layout: base.njk
+title: Landing pages
+description: Landing page design collection with conversion-focused UX, product storytelling, responsive layouts, and polished marketing interfaces.
+permalink: /landing/
+image: /assets/img/landings/l1.png
+---
+{% from "breadcrumbs.njk" import breadcrumbs %}
+{{ breadcrumbs("Landing pages") }}
+
+{% set landingSections = [
+	{
+		eyebrow: "Content-driven marketplace platform",
+		title: "SunSpots",
+		image: "/assets/img/landings/l1.png",
+		url: "https://www.figma.com/proto/RM3z5KnYubeoroab3pYUqr/Portfolio?node-id=5-223&viewport=-380%2C409%2C0.09&t=hO6p6fqjpDooNiLA-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+		info: [
+			{
+				title: "Design Goals",
+				text: "Increase user registrations and clearly communicate the value of the platform for discovering and booking local activities."
+			},
+			{
+				title: "My Role",
+				text: "Information Architecture, UX Structure, UI Design, Responsive Design"
+			},
+			{
+				title: "Challenges Solved",
+				text: "Improved content discoverability, emphasized key actions, and created a more trustworthy user experience."
+			}
+		]
+	},
+	{
+		eyebrow: "AI-powered Digital Products",
+		title: "AI Product Concept",
+		image: "/assets/img/landings/l2.png",
+		url: "https://www.figma.com/proto/RM3z5KnYubeoroab3pYUqr/Portfolio?node-id=2111-3883&p=f&viewport=454%2C262%2C0.05&t=vw4GGxtOCazm7l6d-1&scaling=scale-down-width&content-scaling=fixed&page-id=2110%3A1119",
+		info: [
+			{
+				title: "Design Goals",
+				text: "Explore how modern AI products can be presented through a premium visual experience that combines innovation, clarity, and trust."
+			},
+			{
+				title: "My Role",
+				text: "Product Concept Development,  UX Exploration, Creative Direction, Visual Design"
+			},
+			{
+				title: "Challenges Solved",
+				text: "Created a distinctive AI brand experience by combining clear storytelling, strong visual hierarchy, and engaging interactions."
+			}
+		]
+	},
+	{
+		eyebrow: "Visually driven portfolio experience",
+		title: "Interior Design",
+		image: "/assets/img/landings/l3.png",
+		url: "https://www.figma.com/proto/RM3z5KnYubeoroab3pYUqr/Portfolio?node-id=2111-2500&viewport=390%2C137%2C0.12&t=AzbTLwpQeYutQRuC-1&scaling=min-zoom&content-scaling=fixed&page-id=2110%3A1117",
+		info: [
+			{
+				title: "Design Goals",
+				text: "Showcase interior design services and portfolio projects while generating qualified client inquiries."
+			},
+			{
+				title: "My Role",
+				text: "UX Structure, Content Organization, UI Design, Responsive Design"
+			},
+			{
+				title: "Challenges Solved",
+				text: "Organized content into a scannable portfolio, improved project storytelling, and created clear paths for potential clients."
+			}
+		]
+	},
+	{
+		eyebrow: "Conversion-focused SaaS landing page",
+		title: "eSelf AI",
+		image: "/assets/img/landings/l4.png",
+		url: "https://www.figma.com/proto/RM3z5KnYubeoroab3pYUqr/Portfolio?node-id=2111-1553&p=f&viewport=418%2C60%2C0.08&t=9Za9KdHHF7zrTl5x-1&scaling=min-zoom&content-scaling=fixed&page-id=2110%3A1116",
+		info: [
+			{
+				title: "Design Goals",
+				text: "Present an AI-powered platform in a simple and approachable way while increasing demo requests and user engagement."
+			},
+			{
+				title: "My Role",
+				text: "Product Marketing UX, Information Architecture, UI Concept, Landing Page Design"
+			},
+			{
+				title: "Challenges Solved",
+				text: "Created a clearer AI experience by improving feature hierarchy, optimizing conversion flows, and building user trust."
+			}
+		]
+	},
+	{
+		eyebrow: "Structured SaaS Landing Experience",
+		title: "HR Loris",
+		image: "/assets/img/landings/l5.png",
+		url: "https://www.figma.com/proto/RM3z5KnYubeoroab3pYUqr/Portfolio?node-id=2111-3274&p=f&viewport=414%2C262%2C0.12&t=bGZEKsnITpdr6mH5-1&scaling=min-zoom&content-scaling=fixed&page-id=2110%3A1118",
+		info: [
+			{
+				title: "Design Goals",
+				text: "Improve understanding of the HR platform and encourage businesses to request demos and start free trials."
+			},
+			{
+				title: "My Role",
+				text: "Product UX, Information Architecture, UI Design Concept, Design System"
+			},
+			{
+				title: "Challenges Solved",
+				text: "Simplified complex HR workflows, improved navigation, and strengthened trust through clearer feature presentation and visible CTAs."
+			}
+		]
+	}
+] %}
+
+{% for section in landingSections %}
+	<section class="section section--24-60-0-72">
+		<div class="landings-title">
+			<div>
+				<small>{{ section.eyebrow }}</small>
+				<h1>{{ section.title }}</h1>
+			</div>
+			<a class="landings-link" href="{{section.url}}" target="_blank">
+				<img src="/assets/img/icons/arrow-up.svg" alt="Open landing page prototype">
+			</a>
+		</div>
+
+		<img class="landings-image" src="{{ section.image }}" alt="{{ section.title }} landing page preview">
+		<div class="landings-3-col-info">
+			{% for item in section.info %}
+				<div>
+					<h2>{{ item.title }}</h2>
+					<p>{{ item.text }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endfor %}

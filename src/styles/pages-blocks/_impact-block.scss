@@ -1,0 +1,46 @@
+@use "../settings/breakpoints" as bp;
+.impact-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  &__number {
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-accent);
+    margin-bottom: 42px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Inter", var(--ff-base);
+    text-align: left;
+    min-width: 260px;
+    @include bp.media-down(lg) {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 42px;
+    @include bp.media-down(lg) {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li + li {
+      margin-top: 24px;
+    }
+  }
+  & > * {
+    transition: all 160ms ease;
+  }
+}
+.impact-block > .impact-block--mutted {
+  color: #d9d9d9;
+  .impact-block__number {
+    border-bottom-color: #e1e7e9;
+  }
+}

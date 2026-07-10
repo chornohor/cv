@@ -1,0 +1,51 @@
+{% macro projectHeader(project) %}
+	<section class="section {{ project.sectionclass or "section--24-60-0-72"}}">
+		<div class="project-header-image" style="background-image: url('{{project.img}}'); {{project.imgstyle or ''}}"></div>
+		<div class="project-header__hero">
+			<div class="project-header__intro">
+				<p>{{ project.eyebrow }}</p>
+				<h1>{{ project.title }}</h1>
+			</div>
+
+			<div class="project-header__details">
+				<p class="project-header__summary">{{ project.summary }}
+					{% if project.summary2 %}
+						<br>
+						<br>
+						{{ project.summary2 }}
+					{% endif %}
+				</p>
+
+				<div class="project-header__meta-card">
+					{% for item in project.meta %}
+						<p>
+							<strong>{{ item.label }}:</strong>
+							{{ item.value }}
+						</p>
+					{% endfor %}
+				</div>
+
+				<div class="project-header__detail-group">
+					<h2>{{ project.detailGroups[0].title }}</h2>
+					<ul>
+						{% for item in project
+							.detailGroups[0]
+							.items %}
+							<li>{{ item }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="project-header__detail-group2">
+					<h2>{{ project.detailGroups[1].title }}</h2>
+					<ul>
+						{% for item in project
+							.detailGroups[1]
+							.items %}
+							<li>{{ item }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endmacro %}

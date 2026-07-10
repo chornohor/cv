@@ -1,0 +1,137 @@
+@use "../settings/breakpoints" as bp;
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "empty1 block1 empty2" "block2 empty3 block3";
+  padding-top: 38px;
+  &__block1,
+  &__block2,
+  &__block3 {
+    border-left: 1px solid var(--color-border);
+    padding-left: 42px;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      left: -5px;
+      top: -5px;
+      background: var(--color-text);
+
+      @include bp.media-down(lg) {
+        top: 22px;
+      }
+    }
+  }
+  &__block1 {
+    grid-area: block1;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 30px;
+    &:after {
+      top: inherit;
+      bottom: -5px;
+      @include bp.media-down(lg) {
+        top: 22px;
+        bottom: inherit;
+      }
+    }
+
+    @include bp.media-down(lg) {
+      border-bottom: none;
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+  }
+  &__block2 {
+    grid-area: block2;
+    padding-top: 30px;
+    margin-left: 105px;
+    &::before {
+      content: "2016";
+      position: absolute;
+      left: -120px;
+      top: 10px;
+      opacity: 0.5;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      @include bp.media-down(lg) {
+        left: -17px;
+        top: -30px;
+      }
+    }
+
+    @include bp.media-down(lg) {
+      margin-left: 0;
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+  }
+  &__block3 {
+    grid-area: block3;
+    padding-top: 30px;
+    @include bp.media-down(lg) {
+      padding-bottom: 16px;
+      padding-top: 16px;
+    }
+    &::before {
+      content: "2018";
+      font-family: "Inter", sans-serif;
+      position: absolute;
+      right: -16px;
+      top: 10px;
+      opacity: 0.5;
+      font-size: 14px;
+      @include bp.media-down(lg) {
+        left: -17px;
+        bottom: -30px;
+        top: inherit;
+        right: inherit;
+      }
+    }
+  }
+  &__empty1 {
+    grid-area: empty1;
+    border-bottom: 1px solid var(--color-text);
+  }
+  &__empty2 {
+    grid-area: empty2;
+    border-bottom: 1px solid var(--color-text);
+  }
+  &__empty3 {
+    grid-area: empty3;
+  }
+  h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -3%;
+    margin-bottom: 4px;
+    text-align: left;
+
+    @include bp.media-down(lg) {
+      margin-bottom: 16px;
+      font-family: var(--ff-base);
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  p {
+    opacity: 0.5;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "block2" "block1" "block3";
+    .timeline__empty1,
+    .timeline__empty2,
+    .timeline__empty3 {
+      display: none;
+    }
+  }
+}

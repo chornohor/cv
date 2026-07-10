@@ -1,0 +1,97 @@
+@use "../settings/breakpoints" as bp;
+
+.core-flows {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: center;
+
+  @include bp.media-down(xl) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 42px;
+  }
+}
+.core-flows__right {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  @include bp.media-down(xl) {
+    grid-template-columns: 90px 1fr;
+  }
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    overflow-x: auto;
+  }
+}
+.core-flows__list {
+  display: grid;
+  gap: 24px;
+
+  @include bp.media-down(lg) {
+    gap: 16px;
+    display: flex;
+    .next-block {
+      width: 260px;
+      min-width: 260px;
+      padding: 32px 12px;
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.core-flows__numbers {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 100px;
+  position: relative;
+  &:after {
+    content: "";
+    width: 1px;
+    height: calc(100% - 130px);
+    background: var(--color-border);
+    top: 65px;
+    right: 62px;
+    z-index: -1;
+    position: absolute;
+
+    @include bp.media-down(lg) {
+      width: calc(100% - 220px);
+      height: 1px;
+      right: inherit;
+      left: 110px;
+      top: 52px;
+    }
+  }
+
+  @include bp.media-down(xl) {
+    padding-left: 0;
+  }
+  @include bp.media-down(lg) {
+    flex-direction: row;
+    padding-top: 24px;
+    padding-left: 0;
+  }
+}
+.core-flows__number {
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-family: "Inter", var(--ff-base);
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: 18px;
+  letter-spacing: -2%;
+  background: var(--color-surface);
+}
+.core-flows__title {
+  @include bp.media-down(xl) {
+    text-align: center;
+  }
+}

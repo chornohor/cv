@@ -1,0 +1,324 @@
+---
+layout: base.njk
+title: SaaS
+description: SaaS dashboard product design case study for CRM, operations management, analytics, reporting, and scalable business workflows.
+permalink: /saas/
+image: /assets/img/saas/top.jpg
+---
+
+{% from "project-header.njk" import projectHeader %}
+{% from "project-overview.njk" import projectOverview %}
+{% from "project-challenge.njk" import projectChallenge %}
+{% from "breadcrumbs.njk" import breadcrumbs %}
+{% from "project-impact.njk" import projectImpact %}
+{% from "project-architecture.njk" import projectArchitecture %}
+{% from "project-dashboard-experience.njk" import projectDashboardExperience %}
+{% from "project-two-column-info.njk" import projectTwoColumnInfo %}
+{% from "project-feature-deep-dive.njk" import projectFeatureDeepDive %}
+
+{{ breadcrumbs("SaaS dashboard") }}
+
+{% set projectHeaderData = {
+	eyebrow: "SaaS Dashboard",
+	img: "/assets/img/saas/top.jpg",
+	imgstyle: "background-position: center",
+	title: "CRM & Operations Management Platform",
+	summary: "Designing a scalable SaaS platform for project management, business operations, reporting, and financial workflows.",
+	summary2: "The platform helps teams manage daily operations through centralized dashboards, data management, invoice tracking, and collaborative project workflows.",
+	meta: [
+		{
+			label: "Role",
+			value: "Product Designer"
+		}, {
+			label: "Duration",
+			value: "12 months"
+		}, {
+			label: "Team",
+			value: "CEO, Product Manager, Developers, QA Engineers, Product Designer"
+		}
+	],
+	detailGroups: [
+		{
+			title: "Responsibilities",
+			items: [
+				"UX Research",
+				"Information Architecture",
+				"User Flows",
+				"Dashboard Design",
+				"Design System",
+				"Developer Handoff",
+				"Design QA"
+			]
+		}, {
+			title: "Project Scope",
+			items: ["6 Core Product Modules", "40+ Screens", "120+ Components", "4 User Roles"]
+		}
+	]
+} %}
+
+{{ projectHeader(projectHeaderData) }}
+
+{% set saasProjectOverview = {
+	title: "Overview",
+	paragraphs: [
+		"The company relied on multiple disconnected tools to manage projects, products, invoices, reporting, and operational processes. This created fragmented workflows, duplicated effort, and made it difficult for teams to maintain visibility across business operations.", "The goal was to create a centralized platform that would bring key workflows together and provide teams with a single source of truth for managing daily operations."
+	],
+	lists: [
+		{
+			title: "Users",
+			items: ["Operations", "Managers", "Project Managers", "Team Leads", "Administrators"]
+		}, {
+			title: "Business Goals",
+			items: ["Centralize operational workflows", "Improve project visibility", "Simplify reporting", "Reduce manual administrative work", "Scalable foundation for future growth"]
+		}
+	]
+} %}
+
+{{ projectOverview(saasProjectOverview) }}
+
+{% set saasProjectChallenge = {
+	title: "Challenge",
+	description: "As the platform expanded, new features and modules were introduced without a unified structure. Navigation became increasingly complex, information was scattered across multiple areas, and users often needed several steps to complete routine tasks.<br><br>The challenge was not only designing individual features, but creating a coherent experience across the entire product ecosystem.",
+	problemsTitle: "Key problems",
+	problems: [
+		"Fragmented navigation across multiple modules",
+		"Inconsistent interaction patterns and workflows",
+		"Limited visibility into project progress and team activity",
+		"Difficult access to critical business insights and reports",
+		"Repetitive manual actions across operational processes",
+		"Scalability challenges as new features were introduced"
+	]
+} %}
+
+{{ projectChallenge(saasProjectChallenge) }}
+
+{% set saasProjectArchitecture = {
+	title: "Architecture",
+	description: "To better understand user workflows, I collaborated with stakeholders, reviewed existing product flows, and analyzed how different departments interacted with the platform.",
+	groups: [
+		{
+			title: "Design Goals",
+			items: ["Simplify Workflows", "Improve Navigation", "Increase Consistency", "Support Growth"]
+		}, {
+			title: "Core Modules",
+			items: [
+				"Dashboard",
+				"Projects",
+				"Products",
+				"Invoices",
+				"Reports",
+				"Help Center"
+			]
+		}, {
+			title: "Key Findings",
+			items: [
+				"Fragmented Workflows",
+				"Poor Visibility",
+				"Reporting Inefficiencies",
+				"Complex Navigation",
+				"Inconsistent Patterns",
+				"Scalability Challenges"
+			]
+		}
+	]
+} %}
+
+{{ projectArchitecture(saasProjectArchitecture) }}
+
+{% set saasDashboardExperience = {
+	title: "Dashboard Experience",
+	description: "The dashboard serves as the primary workspace for operational teams and provides an overview of business performance. <br>The goal was to surface critical information without overwhelming users.",
+	images: [
+		{
+			src: "/assets/img/saas/de1.jpg",
+			alt: "SaaS dashboard analytics screen"
+		}, {
+			src: "/assets/img/saas/de2.jpg",
+			alt: "SaaS dashboard reporting screen"
+		}
+	],
+	blocks: [
+		{
+			title: "Managers needed quick access to:",
+			items: ["Revenue metrics", "Business performance indicators", "Project activity", "Sales trends", "Operational updates"]
+		}, {
+			title: "Design Decisions",
+			items: ["Prioritized key business metrics", "Created a clear visual hierarchy", "Added actionable widgets", "Improved readability of analytical data", "Introduced consistent KPI cards"]
+		}
+	]
+} %}
+
+{{ projectDashboardExperience(saasDashboardExperience) }}
+
+{% set saasFeatureDeepDive = {
+	title: "Feature Deep Dive",
+	projects: [
+		{
+			title: "Feature Deep Dive #1 <br>Dashboard Management",
+			description: "The dashboard provides a centralized overview of key business metrics, recent activity, and operational performance, helping users monitor business health and identify important changes at a glance.",
+			image: {
+				src: "/assets/img/saas/pr1.jpg",
+				alt: "Dashboard management feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Disconnected business data",
+						"Limited performance visibility",
+						"Complex information hierarchy",
+						"Delayed operational insights"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Unified analytics dashboard",
+						"Prioritized KPI cards",
+						"Visual trend analysis",
+						"Structured activity feed"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Improvements",
+					items: [
+						"Faster performance monitoring",
+						"Improved operational awareness",
+						"Easier trend identification",
+						"More informed decisions"
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #2 <br>Order & Invoices Management",
+			description: "The module centralizes order processing and invoice tracking, giving operations teams a clear overview of transaction statuses, payment activity, and business performance in one place.",
+			image: {
+				src: "/assets/img/saas/pr2.jpg",
+				alt: "SaaS project management feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Fragmented order tracking",
+						"Limited payment visibility",
+						"Manual status monitoring",
+						"Inefficient record management"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Centralized management dashboard",
+						"Real-time status tracking",
+						"Unified order history",
+						"Organized invoice records"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Improvements",
+					items: [
+						"Faster order management",
+						"Better financial visibility",
+						"Reduced operational effort",
+						"Improved workflow efficiency"
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #3 <br>Sales & Income Analytics",
+			description: "Sales and finance teams needed a clearer view of business performance across revenue, sales trends, and operational activity. The dashboard consolidates key metrics into a single workspace, enabling faster monitoring and more informed business decisions.",
+			image: {
+				src: "/assets/img/saas/pr3.jpg",
+				alt: "SaaS reports and insights feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Disconnected business metrics",
+						"Limited revenue visibility",
+						"Difficult trend analysis",
+						"Delayed business insights"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Unified analytics dashboard",
+						"Interactive sales charts",
+						"Revenue breakdown widgets",
+						"Centralized activity feed"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Improvements",
+					items: [
+						"Faster performance monitoring",
+						"Better revenue visibility",
+						"Easier trend analysis",
+						"Smarter business decisions"
+					]
+				}
+			]
+		}
+	]
+} %}
+
+{{ projectFeatureDeepDive(saasFeatureDeepDive) }}
+
+{% set designSystemOptimization = {
+	title: "Design System Optimization",
+	description: "As the product expanded, maintaining consistency across modules became increasingly challenging. The existing Figma workspace contained duplicated components, inconsistent naming conventions, and patterns that varied between teams. <br><br>To support future growth, I initiated a design system cleanup and restructuring effort.",
+	groups: [
+		{
+			title: "My Contributions",
+			items: [
+				"UI Pattern Audit",
+				"Component Consolidation",
+				"Naming Standardization",
+				"Library Restructuring",
+				"Reusable Components",
+				"Scalable Design Patterns"
+			]
+		}, {
+			title: "Results",
+			items: ["120+ Components Organized", "6 Modules Standardized", "40+ Screens Unified", "Reduced repetitive design work", "Faster Team Collaboration"]
+		}
+	]
+} %}
+
+{{ projectTwoColumnInfo(designSystemOptimization) }}
+
+<img class="example-img" src="/assets/img/saas/example1.jpg" alt="Example">
+
+{% set projectImpactData = {
+	team: [
+		"CEO",
+		"Product Manager",
+		"Developers",
+		"QA Engineers",
+		"Product Designer"
+	],
+	responsibilities: [
+		"Discovery Workshops",
+		"Requirements Discussions",
+		"User Flows / Wireframings",
+		"High-Fidelity UI Design",
+		"Developer Handoff / Design QA"
+	],
+	results: [
+		"6 Modules Redesigned",
+		"Consistent Navigation",
+		"120+ Components Structured",
+		"40+ Screens Standardized",
+		"Stronger Design-Dev Collaboration"
+	]
+} %}
+
+{{ projectImpact(projectImpactData) }}

@@ -1,0 +1,9 @@
+@use "../settings/breakpoints" as bp;
+.col-2 {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
+  }
+}

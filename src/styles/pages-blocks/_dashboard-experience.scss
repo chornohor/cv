@@ -1,0 +1,59 @@
+@use "../settings/breakpoints" as bp;
+.dashboard-experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "block1 block2" "block3 block4";
+  gap: 42px 60px;
+  align-items: center;
+
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 42px;
+    grid-template-areas: "block2" "block1" "block3" "block4";
+    text-align: center;
+  }
+  &__block1 {
+    grid-area: block1;
+  }
+  &__block2 {
+    grid-area: block2;
+  }
+  &__block3 {
+    grid-area: block3;
+  }
+  &__block4 {
+    grid-area: block4;
+  }
+  &__block5 {
+    grid-area: block5;
+  }
+  &__block6 {
+    grid-area: block6;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li + li {
+      margin-top: 24px;
+    }
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  h3 {
+    font-size: 24px;
+
+    @include bp.media-down(lg) {
+      font-size: 20px;
+    }
+  }
+  &.dashboard-experience--3 {
+    grid-template-areas: "block1 block2" "block3 block4" "block5 block6";
+    @include bp.media-down(lg) {
+      grid-template-areas: "block2" "block1" "block3" "block4" "block6" "block5";
+    }
+  }
+}

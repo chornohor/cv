@@ -1,0 +1,7 @@
+[
+  { "label": "Projects", "url": "/#projects" },
+  { "label": "Expertise", "url": "/#expertise" },
+  { "label": "Experience", "url": "/#experience" },
+  { "label": "Growth", "url": "/#growth" },
+  { "label": "Contacts", "url": "#contacts" }
+]

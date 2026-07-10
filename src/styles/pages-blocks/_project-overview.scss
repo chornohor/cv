@@ -1,0 +1,83 @@
+@use "../settings/breakpoints" as bp;
+
+.project-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 1fr);
+  gap: 120px;
+}
+
+.project-overview__content h2 {
+  margin: 0 0 42px;
+}
+
+.project-overview__text {
+  max-width: 430px;
+}
+
+.project-overview__text p {
+  margin: 0;
+
+  & + p {
+    margin-top: 28px;
+  }
+}
+
+.project-overview__lists {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.7fr) minmax(260px, 1fr);
+  gap: 72px;
+  align-self: end;
+}
+
+.project-overview__list h3 {
+  margin: 0 0 28px;
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+  font-weight: 400;
+}
+
+.project-overview__list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-overview__list li + li {
+  margin-top: 24px;
+}
+
+@include bp.media-down(lg) {
+  .project-overview {
+    display: block;
+    text-align: center;
+  }
+
+  .project-overview__content h2 {
+    margin-bottom: 28px;
+  }
+
+  .project-overview__text {
+    max-width: none;
+  }
+
+  .project-overview__text p + p {
+    margin-top: 24px;
+  }
+
+  .project-overview__lists {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .project-overview__list + .project-overview__list {
+    margin-top: 36px;
+  }
+
+  .project-overview__list h3 {
+    margin-bottom: 20px;
+  }
+
+  .project-overview__list li + li {
+    margin-top: 18px;
+  }
+}

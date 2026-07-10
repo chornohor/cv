@@ -1,0 +1,10 @@
+{
+  "name": "Designer CV",
+  "author": "Anastasiia Chornohor",
+  "url": "https://chornohor.github.io/cv",
+  "locale": "en_US",
+  "themeColor": "#2d2d2d",
+  "defaultTitle": "Product Designer Portfolio",
+  "defaultDescription": "Product designer portfolio focused on SaaS dashboards, mobile banking apps, e-commerce platforms, AI product concepts, landing pages, and scalable design systems.",
+  "defaultImage": "/assets/img/home/avatar.jpg"
+}

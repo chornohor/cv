@@ -1,0 +1,17 @@
+{% macro projectChallenge(challenge) %}
+	<section class="section section--42-42-0-72">
+		<h2>{{ challenge.title or "Challenge" }}</h2>
+		<p class="mb42">{{ challenge.description | safe }}</p>
+		<h3>{{ challenge.problemsTitle or "Key problems" }}</h3>
+		<div class="key-problems">
+			{% for problem in challenge.problems %}
+				<div class="key-problems-item">
+					<div class="circle-label circle-label--small">
+						<img src="{{ challenge.icon or '/assets/img/icons/check_mark.svg' }}" alt="{{ challenge.iconAlt or 'Check mark' }}">
+					</div>
+					<span>{{ problem }}</span>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endmacro %}

@@ -1,0 +1,33 @@
+{% macro projectDashboardExperience(experience) %}
+	<section class="section section--42-42-0-72">
+		<h2>{{ experience.title }}</h2>
+		<p class="mb42">{{ experience.description | safe }}</p>
+		<div class="dashboard-experience {{experience.extraclass}}">
+			<img class="dashboard-experience__block1" src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
+			{% for block in experience.blocks %}
+				<div class="dashboard-experience__block{{ loop.index + 1 }}">
+					<h3>{{ block.title }}</h3>
+					<ul>
+						{% for item in block.items %}
+							<li>{{ item | safe  }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+			<img class="dashboard-experience__block4 {{experience.imagespecclass}}" src="{{ experience.images[1].src }}" alt="{{ experience.images[1].alt or experience.title }}">
+			{% if experience.extraclass %}
+				<img class="dashboard-experience__block5 {{experience.imagespecclass}}" src="{{ experience.images[2].src }}" alt="{{ experience.images[2].alt or experience.title }}">
+				{% for block in experience.extrablocks %}
+					<div class="dashboard-experience__block6">
+						<h3>{{ block.title }}</h3>
+						<ul>
+							{% for item in block.items %}
+								<li>{{ item | safe  }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</section>
+{% endmacro %}

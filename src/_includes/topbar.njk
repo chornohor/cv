@@ -1,0 +1,24 @@
+<header class="topbar">
+	<a class="brand" href="/">
+		Logo
+	</a>
+	{# <div >
+		<a href="/mobile">mobile</a>
+		<a href="/e-commerce">e-commerce</a>
+		<a href="/ai">ai</a>
+		<a href="/landing">landing</a>
+		<a href="/design-system">design-system</a>
+		<a href="/saas">saas</a>
+	</div> #}
+	<button class="topbar__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<nav id="primary-navigation" class="nav" aria-label="Primary navigation">
+		{% for item in navigation %}
+			<a class="topbar__link" href="{{ item.url }}">{{ item.label }}</a>
+		{% endfor %}
+		<a href="/assets/CV_Chornohor.pdf" class="button" target="_blank">Download CV</a>
+	</nav>
+</header>

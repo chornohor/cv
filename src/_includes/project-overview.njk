@@ -1,0 +1,25 @@
+{% macro projectOverview(overview) %}
+	<section class="section section--42-42-0-72 project-overview">
+		<div class="project-overview__content">
+			<h2>{{ overview.title or "Overview" }}</h2>
+			<div class="project-overview__text">
+				{% for paragraph in overview.paragraphs %}
+					<p>{{ paragraph }}</p>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="project-overview__lists">
+			{% for list in overview.lists %}
+				<div class="project-overview__list">
+					<h3>{{ list.title }}</h3>
+					<ul>
+						{% for item in list.items %}
+							<li>{{ item }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endmacro %}

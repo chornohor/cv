@@ -1,0 +1,106 @@
+@use "../settings/breakpoints" as bp;
+.section {
+  width: 100%;
+  max-width: calc(1200px + calc(var(--space-section-x) * 2));
+  margin: auto;
+  padding: var(--space-section-y) var(--space-section-x);
+  &--pb0 {
+    padding-bottom: 0;
+  }
+  &--42-42-0-72 {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--24-24-0-72 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--44-44-32-72 {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    @include bp.media-down(lg) {
+      padding-top: 32px;
+      padding-bottom: 72px;
+    }
+  }
+  &--60-60-0-72 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--42-42-0-42 {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 42px;
+    }
+  }
+  &--42-60-0-72 {
+    padding-top: 42px;
+    padding-bottom: 60px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--24-60-0-72 {
+    padding-top: 24px;
+    padding-bottom: 60px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--42-42-24-72 {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    @include bp.media-down(lg) {
+      padding-top: 24px;
+      padding-bottom: 72px;
+    }
+  }
+  &--100-60-0-42 {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 42px;
+    }
+  }
+  &--42-100-0-72 {
+    padding-top: 42px;
+    padding-bottom: 100px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
+  &--42-0-0-0 {
+    padding-top: 42px;
+    padding-bottom: 0px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  &--42-42-0-0 {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,344 @@
+---
+layout: base.njk
+title: Mobile application
+description: Mobile banking product design case study covering core user flows, dashboard experience, financial services, and mobile design system decisions.
+permalink: /mobile/
+image: /assets/img/mobile/top.jpg
+---
+{% from "breadcrumbs.njk" import breadcrumbs %}
+{% from "project-header.njk" import projectHeader %}
+{% from "project-overview.njk" import projectOverview %}
+{% from "project-challenge.njk" import projectChallenge %}
+{% from "project-impact.njk" import projectImpact %}
+{% from "project-dashboard-experience.njk" import projectDashboardExperience %}
+{% from "project-two-column-info.njk" import projectTwoColumnInfo %}
+{% from "project-feature-deep-dive.njk" import projectFeatureDeepDive %}
+{{ breadcrumbs("Mobile application") }}
+{% set projectHeaderData = {
+	eyebrow: "Mobile Aplication",
+	img: "/assets/img/mobile/top.jpg",
+	imgstyle: "background-position: center",
+	title: "Digital Banking & Financial app",
+	summary: "Designing a mobile banking experience that helps users manage daily finances, transfer money, apply for loans, and purchase insurance products in a single app.",
+	meta: [
+		{
+			label: "Role",
+			value: "Product Designer"
+		}, {
+			label: "Duration",
+			value: "6 months"
+		}, {
+			label: "Platform",
+			value: "iOS, Android"
+		}
+	],
+	detailGroups: [
+		{
+			title: "Responsibilities",
+			items: [
+				"UX Research",
+				"User Flows",
+				"Mobile UI Design",
+				"Financial Product Flows",
+				"Prototyping",
+				"Design System",
+				"Design QA"
+			]
+		}, {
+			title: "Project Scope",
+			items: ["25+ Mobile Screens", "5 Core Financial Services", "End-to-End User Flows", "Mobile Design System"]
+		}
+	]
+} %}
+{{ projectHeader(projectHeaderData) }}
+
+{% set projectOverviewData = {
+	title: "Overview",
+	paragraphs: [
+		"The goal of the project was to create a mobile banking experience that combines everyday financial management with access to additional financial products such as loans and insurance.",
+		"Instead of requiring users to switch between multiple banking tools, the app provides a centralized environment for managing personal finances."
+	],
+	lists: [
+		{
+			title: "Users",
+			items: [
+				"Young Professionals",
+				"Freelancers",
+				"Digital Banking Customers"
+			]
+		},
+		{
+			title: "Business Goals",
+			items: [
+				"Increase engagement within the banking ecosystem",
+				"Encourage adoption of financial products",
+				"Simplify everyday banking tasks",
+				"Improve self-service capabilities"
+			]
+		}
+	]
+} %}
+
+{{ projectOverview(projectOverviewData) }}
+
+{% set projectChallengeData = {
+	title: "Challenge",
+	description: "Traditional banking apps often focus on account management while making secondary services difficult to discover. The challenge was designing an experience that balances frequent actions like checking balances and transferring money with more complex products such as loans and insurance.",
+	problemsTitle: "Key problems",
+	problems: ["Simplifying financial workflows", "Reducing friction in transaction flows", "Making financial products discoverable", "Maintaining user trust"]
+} %}
+
+{{ projectChallenge(projectChallengeData) }}
+
+<section class="section section--42-42-0-72 ">
+	<h2 class="core-flows__title">Core User Flows</h2>
+	<div class="core-flows">
+		<p>Before moving into interface design, I mapped the most important user journeys to identify friction points and simplify complex financial interactions. <br><br> The goal was to create intuitive experiences that help users complete financial tasks quickly while maintaining trust and transparency.<br><br> These flows became the foundation for all major product features and helped establish a consistent experience across the application.</p>
+		<div class="core-flows__right">
+			<div class="core-flows__numbers">
+				<div class="core-flows__number">01</div>
+				<div class="core-flows__number">02</div>
+				<div class="core-flows__number">03</div>
+				<div class="core-flows__number">04</div>
+			</div>
+			<div class="core-flows__list" aria-label="Core user flows">
+				<div class="next-block">
+					<h3>Money Transfer</h3>
+					<span>Dashboard</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Transfer</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Review</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Confirmation</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Success</span>
+				</div>
+				<div class="next-block">
+					<h3>Insurance Purchase</h3>
+					<span>Catalog</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Insurance Plan</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Details</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Payment</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Confirmation</span>
+				</div>
+				<div class="next-block">
+					<h3>Loan Application</h3>
+					<span>Discovery</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Product</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Form</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Payment Plan</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Submission</span>
+				</div>
+				<div class="next-block">
+					<h3>Financial Insights</h3>
+					<span>Dashboard</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Analytics</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Transaction Details</span>
+					<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+					<span>Spending Overview</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% set saasDashboardExperience = {
+	title: "Dashboard Experience",
+	imagespecclass: "dashboard-experience-full-image",
+	description: "The dashboard acts as the primary entry point and provides users with a snapshot of their financial situation.",
+	images: [
+		{
+			src: "/assets/img/mobile/de1.jpg",
+			alt: "Mobile banking dashboard screen"
+		}, {
+			src: "/assets/img/mobile/de2.jpg",
+			alt: "Mobile banking dashboard detail screen"
+		}
+	],
+	blocks: [
+		{
+			title: "Users needed quick access to:",
+			items: ["Account Balance", "Recent Transactions", "Quick Actions", "Financial Services"]
+		}, {
+			title: "Design Decisions",
+			items: ["Prioritized account visibility", "Introduced quick-action shortcuts", "Reduced navigation depth", "Improved scanability"]
+		}
+	]
+} %}
+
+{{ projectDashboardExperience(saasDashboardExperience) }}
+
+{% set saasFeatureDeepDive = {
+	title: "Feature Deep Dive",
+	projects: [
+		{
+			title: "Feature Deep Dive #1 <br> Money Transfers",
+			description: "Money transfers represent one of the most frequently used banking features. The goal was to create a fast and predictable transfer experience.",
+			image: {
+				src: "/assets/img/mobile/pr1.jpg",
+				alt: "Mobile financial services feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Multiple input fields",
+						"Risk of transfer mistakes",
+						"Security concerns",
+						"User confidence"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Enter recipient",
+						"Enter amount",
+						"Review details",
+						"Confirm transaction"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Key UX Decisions",
+					items: [
+						"Clear form hierarchy",
+						"Visible transfer summary",
+						"Confirmation step before submission",
+						"Success feedback screen"
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #2 <br>Bank to Bank Transfer",
+			description: "Sending money between banks should be fast and effortless. The flow was designed to simplify transfers through a guided, step-by-step experience with clear confirmation before completion.",
+			image: {
+				src: "/assets/img/mobile/pr2.jpg",
+				alt: "Mobile insurance purchase feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Multiple transfer steps",
+						"Error-prone data entry",
+						"Low transaction confidence",
+						"Unclear payment details"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Guided transfer flow",
+						"Simplified input forms",
+						"Clear transaction summary",
+						"Structured confirmation screen"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Key UX Decisions",
+					items: [
+						"Improved task completion",
+						"Reduced input errors",
+						"Increased user confidence",
+						"Improved task completion"
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #3 <br> Loan Application Experience",
+			description: "Applying for financial products can be intimidating for users. The goal was to simplify loan discovery and application.",
+			image: {
+				src: "/assets/img/mobile/pr3.jpg",
+				alt: "Mobile loan application feature screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Complex loan applications",
+						"Difficult product comparison",
+						"Lengthy application process",
+						"Low user confidence"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Solution",
+					items: [
+						"Guided application flow",
+						"Personalized loan recommendations",
+						"Step-by-step forms",
+						"Clear payment breakdown"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Key UX Decisions",
+					items: [
+						"Faster loan applications",
+						"Easier product comparison",
+						"Reduced user friction",
+						"Improved decision confidence"
+					]
+				}
+			]
+		}
+	]
+} %}
+
+{{ projectFeatureDeepDive(saasFeatureDeepDive) }}
+
+{% set designSystemOptimization = {
+	title: "Mobile Design System",
+	description: "To ensure consistency across the app, I developed reusable mobile patterns and components.",
+	groups: [
+		{
+			title: "Included",
+			items: ["Form Elements / Buttons", "Financial Cards", "Bottom Navigation / Input Components", "Status Messages / Success States"]
+		}, {
+			title: "Results",
+			items: ["Faster design iterations", "Consistent user experience", "Simplified developer handoff"]
+		}
+	]
+} %}
+
+{{ projectTwoColumnInfo(designSystemOptimization) }}
+
+<img class="example-img" src="/assets/img/mobile/example1.jpg" alt="Example">
+
+{% set projectImpactData = {
+	team: [
+		"Product Manager",
+		"Mobile Developers",
+		"QA Team"
+	],
+	responsibilities: [
+		"User Flow Design",
+		"Wireframes",
+		"High-Fidelity UI",
+		"Interactive Prototypes",
+		"Design QA"
+	],
+	results: [
+		"5 Core Financial Flows",
+		"Mobile Design System",
+		"25+ Unified Screens",
+		"Improved Discoverability",
+		"Reusable Components"
+	]
+} %}
+
+{{ projectImpact(projectImpactData) }}

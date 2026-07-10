@@ -1,0 +1,20 @@
+{% macro projectArchitecture(architecture) %}
+	<section class="section {{ architecture.class or "section--42-42-0-72" }}">
+		<h2>{{ architecture.title or "Architecture" }}</h2>
+		<div class="architecture-block">
+			<div>{{ architecture.description | safe }}</div>
+			<div class="architecture-block__table">
+				{% for group in architecture.groups %}
+					<div class="architecture-block-item">
+						<b>{{ group.title }}</b>
+						<ul>
+							{% for item in group.items %}
+								<li>{{ item }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endmacro %}

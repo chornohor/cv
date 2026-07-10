@@ -1,0 +1,29 @@
+.circle-label {
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-white);
+
+  img {
+    width: 22px;
+  }
+  &--small {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    img {
+      width: 20px;
+    }
+  }
+  &--outlined {
+    background: var(--color-surface);
+    color: var(--color-accent);
+    cursor: default !important;
+  }
+}

@@ -1,0 +1,7 @@
+{% macro breadcrumbs(currentPage) %}
+	<section class="breadcrumbs">
+		<a class="link" href="/">Home</a>
+		<img src="/assets/img/icons/chevron_left.svg" alt="Back arrow">
+		<span>{{ currentPage }}</span>
+	</section>
+{% endmacro %}

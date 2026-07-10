@@ -1,0 +1,68 @@
+@use "../settings/breakpoints" as bp;
+.landings-3-col-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 42px;
+  padding: 18px 24px;
+  h2 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 42px;
+    @include bp.media-down(lg) {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 12px;
+  }
+}
+.landings-title {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: center;
+  @include bp.media-down(lg) {
+    gap: 12px;
+    padding: 0;
+  }
+  small {
+    display: inline-block;
+    margin-bottom: 18px;
+    @include bp.media-down(lg) {
+      margin-bottom: 12px;
+    }
+  }
+  h1 {
+    @include bp.media-down(lg) {
+      font-size: 32px;
+    }
+  }
+}
+.landings-image {
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+.landings-link {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-text);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+  &:hover {
+    background: var(--color-accent);
+  }
+  img {
+    width: 22px;
+  }
+}

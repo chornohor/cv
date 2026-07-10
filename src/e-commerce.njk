@@ -1,0 +1,371 @@
+---
+layout: base.njk
+title: E-commerce
+description: E-commerce product design case study focused on product discovery, checkout optimization, conversion strategy, and scalable shopping experiences.
+permalink: /e-commerce/
+image: /assets/img/e-commerce/top.jpg
+---
+{% from "breadcrumbs.njk" import breadcrumbs %}
+{% from "project-header.njk" import projectHeader %}
+{% from "project-overview.njk" import projectOverview %}
+{% from "project-challenge.njk" import projectChallenge %}
+{% from "project-impact.njk" import projectImpact %}
+{% from "project-dashboard-experience.njk" import projectDashboardExperience %}
+{% from "project-two-column-info.njk" import projectTwoColumnInfo %}
+{% from "project-feature-deep-dive.njk" import projectFeatureDeepDive %}
+{{ breadcrumbs("E-commerce") }}
+{% set projectHeaderData = {
+	eyebrow: "E-commerce",
+	img: "/assets/img/e-commerce/top.jpg",
+	title: "Consumer Electronics E-commerce Platform",
+	summary: "Redesigning a scalable e-commerce platform focused on faster product discovery, frictionless purchasing, and a consistent shopping experience across the entire customer journey.",
+	summary2: "The redesign improved content organization, simplified key user flows, and established a scalable foundation for future feature expansion.",
+	meta: [
+		{
+			label: "Role",
+			value: "Product Designer"
+		}, {
+			label: "Duration",
+			value: "4 months"
+		}, {
+			label: "Platform",
+			value: "Responsive Web"
+		}
+	],
+	detailGroups: [
+		{
+			title: "Responsibilities",
+			items: [
+				"UX Research",
+				"Information Architecture",
+				"User Flow Design",
+				"UI Design",
+				"Checkout Optimization",
+				"Design System",
+				"Developer Handoff"
+			]
+		}, {
+			title: "Project Scope",
+			items: ["Homepage", "Product Catalog", "Product Detail Pages", "Multi-Step Checkout Flow"]
+		}
+	]
+} %}
+{{ projectHeader(projectHeaderData) }}
+
+{% set projectOverviewData = {
+	title: "Overview",
+	paragraphs: [
+		"The project focused on designing an e-commerce platform for consumer electronics, helping users discover products, compare options, and complete purchases through a streamlined shopping experience.",
+		"The business needed a scalable solution capable of supporting a growing product catalog while maintaining a simple and intuitive purchasing journey."
+	],
+	lists: [
+		{
+			title: "Users",
+			items: [
+				"Online Shoppers",
+				"Returning Customers",
+				"Technology Enthusiasts"
+			]
+		},
+		{
+			title: "Business Goals",
+			items: [
+				"Improve product discoverability",
+				"Increase purchase completion",
+				"Reduce checkout friction",
+				"Support future catalog growth"
+			]
+		}
+	]
+} %}
+
+{{ projectOverview(projectOverviewData) }}
+
+{% set projectChallengeData = {
+	title: "Challenge",
+	description: "Purchasing electronics often requires users to compare multiple products, evaluate specifications, and navigate large amounts of information before making a decision. The challenge was creating a shopping experience that simplifies this process while maintaining transparency and user confidence throughout the purchase journey.",
+	problemsTitle: "Key problems",
+	problems: ["Large product catalog", "Complex purchasing decisions", "Information overload", "Checkout abandonment risk"]
+} %}
+
+{{ projectChallenge(projectChallengeData) }}
+
+<section class="section section--42-60-0-72">
+	<h2>Core user Flow</h2>
+	<div class="ec-user-flow-info">
+		<div>
+			<p>Before moving into interface design, I mapped the key customer journey to identify friction points and simplify the purchasing experience. <br><br>This flow became the foundation for all product and checkout decisions throughout the project.</p>
+		</div>
+		<div class="next-block">
+			<h3>Money Transfer</h3>
+			<span>Products</span>
+			<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+			<span>Product Details</span>
+			<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+			<span>Add to Cart</span>
+			<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+			<span>Cart</span>
+			<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+			<span>Checkout</span>
+			<img src="/assets/img/icons/arrow-r.svg" alt="Next step">
+			<span>Confirmation</span>
+		</div>
+	</div>
+	<h3 class="ec-ux-priorities-title">UX Priorities</h3>
+	<div class="ec-ux-priorities">
+		<div>
+			<div class="ec-ux-priorities__number">01</div>
+			<div>
+				<b>Product Discovery</b>
+			</div>
+			<p>Improve access to products through intuitive browsing and navigation.</p>
+		</div>
+		<div>
+			<div class="ec-ux-priorities__number">02</div>
+			<div>
+				<b>Decision Making</b>
+			</div>
+			<p>Present information clearly to support faster purchasing decisions.</p>
+		</div>
+		<div>
+			<div class="ec-ux-priorities__number">03</div>
+			<div>
+				<b>Checkout Flow</b>
+			</div>
+			<p>Reduce friction throughout the purchase process.</p>
+		</div>
+		<div>
+			<div class="ec-ux-priorities__number">04</div>
+			<div>
+				<b>Customer Confidence</b>
+			</div>
+			<p>Build trust with transparent product and pricing information.</p>
+		</div>
+	</div>
+</section>
+
+{% set saasFeatureDeepDive = {
+	title: "Feature Deep Dive",
+	specclass: "ec-feature-block",
+	projects: [
+		{
+			title: "Feature Deep Dive #1 <br> Homepage experience",
+			description: "The homepage serves as the primary entry point, helping users discover products, promotions, and key categories.",
+			image: {
+				src: "/assets/img/e-commerce/pr1.jpg",
+				alt: "E-commerce homepage experience screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Goals",
+					items: [
+						"Increase product visibility",
+						"Highlight featured offers",
+						"Support product exploration"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Design Decisions",
+					items: [
+						"Structured category navigation",
+						"Product-focused content hierarchy",
+						"Featured promotional sections",
+						"Confirm transaction"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Result",
+					items: [
+						"Created a clearer entry point that encourages exploration and improves product discoverability."
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #2 <br>Product Discovery",
+			description: "As the catalog expanded, helping users find products efficiently became increasingly important. ",
+			image: {
+				src: "/assets/img/e-commerce/pr2.jpg",
+				alt: "E-commerce product discovery screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "Challenges",
+					items: [
+						"Large number of products",
+						"Multiple categories",
+						"Different browsing behaviors"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Features",
+					items: [
+						"Category Navigation",
+						"Product Grid Layout",
+						"Product Cards, Filtering Structure"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Result",
+					items: [
+						"Users could browse products more efficiently and quickly locate relevant items."
+					]
+				}
+			]
+		},
+		{
+			title: "Feature Deep Dive #3 <br> Product Details Experience",
+			description: "The product page was designed to support purchasing decisions by providing essential information in a clear and accessible format.",
+			image: {
+				src: "/assets/img/e-commerce/pr3.jpg",
+				alt: "E-commerce product details screen"
+			},
+			groups: [
+				{
+					icon: "/assets/img/icons/shape-line.svg",
+					title: "User Needs",
+					items: [
+						"Product Images, Specifications",
+						"Pricing Information, Reviews",
+						"Related Products"
+					]
+				}, {
+					icon: "/assets/img/icons/award.svg",
+					title: "Design Decisions",
+					items: [
+						"Prioritized product imagery",
+						"Improved content hierarchy",
+						"Emphasized primary purchase actions"
+					]
+				}, {
+					icon: "/assets/img/icons/magic.svg",
+					title: "Result",
+					items: [
+						"Created a more informative and trustworthy product evaluation experience."
+					]
+				}
+			]
+		}
+	]
+} %}
+
+{{ projectFeatureDeepDive(saasFeatureDeepDive) }}
+
+<section class="section section--42-60-0-72">
+	<h2>Conversion Strategy</h2>
+	<p class="ec-conversion-strategy-text">One of the primary business goals was reducing friction between product discovery and purchase completion. Rather than focusing only on interface design, I analyzed the entire shopping journey to identify points where users could hesitate or abandon the purchase process. <br><br>These improvements helped create a smoother transition from product exploration to checkout while supporting the business goal of increasing purchase completion.</p>
+	<div class="ec-conversion-strategy-wrapper">
+		<div class="ec-conversion-strategy-items">
+			<div class="ec-conversion-strategy-item">
+				<div class="ec-conversion-strategy-item__number">01</div>
+				<div>
+					<h3>Improved Product Visibility</h3>
+					<p>Structured product information and imagery to help users evaluate products faster.</p>
+				</div>
+			</div>
+			<div class="ec-conversion-strategy-item">
+				<div class="ec-conversion-strategy-item__number">02</div>
+				<div>
+					<h3>Reduced Decision Fatigue</h3>
+					<p>Presented information in digestible sections and prioritized the most relevant content.</p>
+				</div>
+			</div>
+			<div class="ec-conversion-strategy-item">
+				<div class="ec-conversion-strategy-item__number">03</div>
+				<div>
+					<h3>Clear Purchase Actions</h3>
+					<p>Created a consistent call-to-action hierarchy across product and checkout pages.</p>
+				</div>
+			</div>
+			<div class="ec-conversion-strategy-item">
+				<div class="ec-conversion-strategy-item__number">04</div>
+				<div>
+					<h3>Checkout Experience</h3>
+					<p>Ensured users always understood pricing, order details, and next steps throughout the purchase flow.</p>
+				</div>
+			</div>
+		</div>
+		<div class="ec-conversion-strategy-image">
+			<img src="/assets/img/e-commerce/comments.png" alt="Checkout conversion comments and design notes">
+		</div>
+	</div>
+</section>
+{% set saasDashboardExperience = {
+	title: "Checkout Optimization",
+	extraclass: "dashboard-experience--3",
+	description: "Checkout was the most business-critical stage of the experience.<br> The goal was to reduce friction while maintaining transparency and user confidence.<br> Designed a structured multi-step checkout flow that breaks complex actions into smaller, manageable steps.",
+	images: [
+		{
+			src: "/assets/img/e-commerce/de1.jpg",
+			alt: "Checkout customer information step"
+		}, {
+			src: "/assets/img/e-commerce/de2.jpg",
+			alt: "Checkout delivery and payment step"
+		}, {
+			src: "/assets/img/e-commerce/de3.jpg",
+			alt: "Checkout order review step"
+		}
+	],
+	blocks: [
+		{
+			title: "Step 1 — Customer Information",
+			items: ["Collecting shipping and contact details.<br> <br>", "<b>Design focus:</b>", "Simpler form completion", "Better readability", "Reduced input errors"]
+		}, {
+			title: "Step 2 — Delivery & Payment",
+			items: ["Selecting shipping preferences and payment methods.<br> <br>", "<b>Design focus:</b>", "Clear progression", "Transparent costs", "Trust during payment selection"]
+		}
+	],
+	extrablocks: [
+		{
+			title: "Step 3 — Order Review",
+			items: ["Reviewing order details before purchase confirmation.<br> <br>", "<b>Design focus:</b>", "Transparency", "Purchase confidence", "Error prevention"]
+		}
+	]
+} %}
+
+{{ projectDashboardExperience(saasDashboardExperience) }}
+
+{% set designSystemOptimization = {
+	title: "Design System",
+	description: "To maintain consistency across the platform, I established reusable UI patterns and scalable components. <br><br> The design system accelerated future design work and improved consistency throughout the platform.",
+	groups: [
+		{
+			title: "My Contributions",
+			items: ["Standardized interface patterns", "Created reusable components", "Unified form behaviors", "Improved consistency across all flows"]
+		}, {
+			title: "Components Included",
+			items: ["Product Cards / Buttons", "Forms / Navigation Elements", "Checkout Components", "Product Grids"]
+		}
+	]
+} %}
+
+{{ projectTwoColumnInfo(designSystemOptimization) }}
+
+<img class="example-img" src="/assets/img/e-commerce/example1.jpg" alt="Example">
+
+{% set projectImpactData = {
+	team: [
+		"Product Manager",
+		"Developers",
+		"Marketing Team",
+		"QA Team"
+	],
+	responsibilities: [
+		"UX Research / User Flow Design",
+		"Wireframes",
+		"High-Fidelity UI",
+		"Prototyping",
+		"Developer Handoff / Design QA"
+	],
+	results: [
+		"End-to-End Shopping Flow",
+		"Streamlined Checkout Process",
+		"Improved Purchase Confidence",
+		"Scalable Catalog Foundation",
+		"Reduced Purchase Friction"
+	]
+} %}
+
+{{ projectImpact(projectImpactData) }}

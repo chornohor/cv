@@ -1,0 +1,185 @@
+---
+layout: base.njk
+title: Design system
+description: Design system case study showing scalable foundations, reusable components, form patterns, documentation, and team workflow improvements.
+permalink: /design-system/
+image: /assets/img/design-system/main.jpg
+---
+{% from "breadcrumbs.njk" import breadcrumbs %}
+{% from "project-architecture.njk" import projectArchitecture %}
+{% from "project-dashboard-experience.njk" import projectDashboardExperience %}
+{% from "project-two-column-info.njk" import projectTwoColumnInfo %}
+{{ breadcrumbs("Design system") }}
+<section class="section section--24-24-0-72">
+	<div class="dsystem-topimg"></div>
+	<h2>Design System</h2>
+	<div class="dsystem-topcols">
+		<div>Building a scalable design system to improve consistency, efficiency, and collaboration across digital products. <br><br> As the product ecosystem expanded, maintaining consistency across interfaces became increasingly challenging. Different teams were creating similar UI elements independently, leading to duplicated components, inconsistent patterns, and increased design debt. <br><br> The goal was to create a centralized design system that would establish a shared visual language, improve collaboration between design and development teams, and accelerate future product development.</div>
+		<div class="dsystem-topcols__right">
+			<div>
+				<h3>The Chellenge</h3>
+				<p>Product growth led to inconsistent patterns, duplicated components, and inefficient design workflows.</p>
+			</div>
+			<div>
+				<h3>Goal</h3>
+				<p>Create a scalable system that enables faster and more consistent product development.</p>
+			</div>
+		</div>
+	</div>
+</section>
+{% set designSystemArchitecture = {
+	title: "Architecture",
+	class: "section--42-42-0-42",
+	description: "I established design foundations to create consistency across the interface and support future UI decisions.<br><br>Building on these foundations, I created a reusable component library that could scale across multiple products and future features.",
+	groups: [
+		{
+			title: "Foundation Layer",
+			items: [
+				"Typography Scale",
+				"Color Palette",
+				"Icon Library",
+				"Spacing System",
+				"Layout Principles",
+				"Accessibility Standards"
+			]
+		}, {
+			title: "Component Structure",
+			items: ["Atomic Components", "Component Variants", "Interactive States", "Shared Behaviors", "Documentation Standards"]
+		}, {
+			title: "Included Components",
+			items: [
+				"Buttons, Inputs",
+				"Selects, Checkboxes",
+				"Radio Buttons",
+				"Date Pickers",
+				"Navigation Elements",
+				"Status Indicators"
+			]
+		}
+	]
+} %}
+<section class="section section--42-42-0-72">
+	<div class="dsystem-counters">
+		<div class="dsystem-counters__item">
+			<div class="dsystem-counters__number">200+</div>
+			<div>UI Design<br>Elements</div>
+		</div>
+		<div class="dsystem-counters__item">
+			<div class="dsystem-counters__number">40+</div>
+			<div>Reusable<br>Components</div>
+		</div>
+		<div class="dsystem-counters__item">
+			<div class="dsystem-counters__number">150+</div>
+			<div>Icons<br>Organized</div>
+		</div>
+		<div class="dsystem-counters__item">
+			<div class="dsystem-counters__number">20+</div>
+			<div>Design<br>Tokens</div>
+		</div>
+		<div class="dsystem-counters__item">
+			<div class="dsystem-counters__number">120+</div>
+			<div>Component<br>States & Variants</div>
+		</div>
+	</div>
+</section>
+{{ projectArchitecture(designSystemArchitecture) }}
+<img class="example-img example-img--600" src="/assets/img/design-system/example1.jpg" alt="Example">
+{% set saasDashboardExperience = {
+	title: "Form System",
+	description: "Forms represent one of the most commonly used interaction patterns across digital products. To improve consistency and usability, I designed a structured form system with standardized validation, interaction states, and reusable patterns.",
+	images: [
+		{
+			src: "/assets/img/design-system/forms1.png",
+			alt: "Form system inputs and validation states"
+		}, {
+			src: "/assets/img/design-system/forms2.png",
+			alt: "Form system component examples"
+		}
+	],
+	blocks: [
+		{
+			title: "Design Goals",
+			items: ["Reduce implementation inconsistencies", "Improve usability", "Standardize validation behavior", "Increase component reuse", "Support scalable product growth"]
+		}, {
+			title: "Included Elements",
+			items: ["Text Inputs", "Select Fields", "Date Pickers, Validation Messages", "Success States, Error States"]
+		}
+	]
+} %}
+
+{{ projectDashboardExperience(saasDashboardExperience) }}
+<section class="section section--42-100-0-72">
+	<h2 class="ta-c">Design Principles</h2>
+	<p class="design-principles-text">The system was built around several core principles.</p>
+	<div class="design-principles">
+		<div class="design-principles-item">
+			<div class="design-principles-item__number">01</div>
+			<div class="design-principles-item__title">Consistency</div>
+			<div class="design-principles-item__text">Create predictable and <br>familiar user experiences <br>across products.</div>
+		</div>
+		<div class="design-principles-item">
+			<div class="design-principles-item__number">02</div>
+			<div class="design-principles-item__title">Scalability</div>
+			<div class="design-principles-item__text">Support future growth <br>without increasing <br>complexity.</div>
+		</div>
+		<div class="design-principles-item design-principles-item--active">
+			<div class="design-principles-item__number">03</div>
+			<div class="design-principles-item__title">Reusability</div>
+			<div class="design-principles-item__text">Reduce repetitive <br>work with shared <br>components.</div>
+		</div>
+		<div class="design-principles-item">
+			<div class="design-principles-item__number">04</div>
+			<div class="design-principles-item__title">Accessibility</div>
+			<div class="design-principles-item__text">Ensure components <br>remain clear, usable, <br>and inclusive.</div>
+		</div>
+		<div class="design-principles-item">
+			<div class="design-principles-item__number">05</div>
+			<div class="design-principles-item__title">Collaboration</div>
+			<div class="design-principles-item__text">Create a shared language <br>between design and <br>engineering teams.</div>
+		</div>
+	</div>
+</section>
+{% set designSystemDocumentation = {
+	title: "Documentation",
+	description: "A design system is more than a collection of UI components.<br><br>To ensure adoption across teams, I organized documentation covering component behavior, usage rules, naming conventions, and implementation guidelines.",
+	groups: [
+		{
+			title: "Included",
+			items: [
+				"Component Guidelines",
+				"Usage Rules, States & Variants",
+				"Design Tokens, Naming Conventions",
+				"Developer References"
+			]
+		}, {
+			title: "Team Benefits",
+			items: [
+				"Faster onboarding",
+				"Reduced design decision-making time",
+				"Improved communication with devs",
+				"Implementation across products"
+			]
+		}
+	]
+} %}
+
+{{ projectTwoColumnInfo(designSystemDocumentation) }}
+<section class="section section--100-60-0-42">
+	<h2 class="ta-c">Results</h2>
+	<p class="dsystem-results-text">The design system became a shared foundation that improved consistency, streamlined collaboration, and increased efficiency across design and development teams. Building the system taught me to balance flexibility with consistency and reinforced my ability to create scalable solutions that extend beyond individual screens.</p>
+	<div class="dsystem-results">
+		<div class="dsystem-results__item">
+			<div class="dsystem-results__number">70%</div>
+			<div>Less UI Duplication</div>
+		</div>
+		<div class="dsystem-results__item">
+			<div class="dsystem-results__number">120+</div>
+			<div>Reusable Components</div>
+		</div>
+		<div class="dsystem-results__item">
+			<div class="dsystem-results__number">6</div>
+			<div>Standardized Modules</div>
+		</div>
+	</div>
+</section>
+<img class="example-img example-img--600" src="/assets/img/design-system/example2.jpg" alt="Example">

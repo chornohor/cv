@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		{% set pageTitle = title or site.defaultTitle %}
+		{% set pageDescription = description or site.defaultDescription %}
+		{% set pageUrl = site.url + (page.url or permalink or '/') %}
+		{% set pageImage = site.url + (image or site.defaultImage) %}
+		<title>{{ pageTitle }} | {{ site.name }}</title>
+		<meta
+      name="description"
+      content="{{ pageDescription }}"
+/>
+		<meta name="author" content="{{ site.author }}"/>
+		<meta name="robots" content="{{ robots or 'index, follow' }}"/>
+		<meta name="theme-color" content="{{ site.themeColor }}"/>
+		<link rel="canonical" href="{{ pageUrl }}"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="{{ site.name }}"/>
+		<meta property="og:title" content="{{ pageTitle }} | {{ site.name }}"/>
+		<meta property="og:description" content="{{ pageDescription }}"/>
+		<meta property="og:url" content="{{ pageUrl }}"/>
+		<meta property="og:image" content="{{ pageImage }}"/>
+		<meta property="og:locale" content="{{ site.locale }}"/>
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:title" content="{{ pageTitle }} | {{ site.name }}"/>
+		<meta name="twitter:description" content="{{ pageDescription }}"/>
+		<meta name="twitter:image" content="{{ pageImage }}"/>
+		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"/>
+		<link rel="stylesheet" href="/vendor/modern-normalize.css"/>
+		<link rel="stylesheet" href="/styles.css"/>
+	</head>
+	<body>
+		{% include "topbar.njk" %}
+
+		<main>{{ content | safe }}</main>
+
+		{% include "footer.njk" %}
+		<script src="/scripts/topbar.js" defer></script>
+		<script src="/scripts/tag-marquee.js" defer></script>
+		<script src="/scripts/expertise-switcher.js" defer></script>
+		<script src="/scripts/projects-carousel.js" defer></script>
+		<script src="/scripts/images-carousel.js" defer></script>
+		<script src="/scripts/project-impact.js" defer></script>
+		<script src="/scripts/experience-accordion.js" defer></script>
+		<script src="/scripts/design-principles.js" defer></script>
+		<script src="/scripts/project-feature-deep-dive.js" defer></script>
+	</body>
+</html>
