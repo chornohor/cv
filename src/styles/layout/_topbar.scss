@@ -44,10 +44,25 @@
       outline-offset: 4px;
     }
   }
-  .button {
-    margin-left: 24px;
+  &__button {
+    display: inline-block;
+    padding-left: 24px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 24px;
+      top: calc(50% - 12px);
+      background: var(--color-border);
+      left: 0;
+      @include bp.media-down(lg) {
+        display: none;
+      }
+    }
+
     @include bp.media-down(lg) {
-      margin-left: 0;
+      padding-left: 0;
     }
   }
 }
@@ -143,9 +158,11 @@
       font-size: 20px;
     }
 
-    .button {
+    .nav__button {
       margin-top: auto;
-      min-width: 119px;
+      .button {
+        min-width: 119px;
+      }
     }
   }
 

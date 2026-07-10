@@ -10,8 +10,7 @@
   &__header {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 32px;
+    gap: 42px;
     padding-top: 42px;
     padding-bottom: 42px;
 
@@ -32,12 +31,10 @@
     display: flex;
     gap: 22px;
     overflow-x: auto;
-    padding-bottom: 8px;
     white-space: nowrap;
-    opacity: 0;
+    margin-top: 5px;
 
     @include bp.media-down(lg) {
-      opacity: 1;
       max-width: calc(100vw - calc(var(--space-section-x) * 2));
     }
   }
@@ -45,7 +42,7 @@
   &__tab {
     border: 0;
     border-bottom: 1px solid transparent;
-    padding: 0 0 4px;
+    padding: 0 0 1px;
     background: none;
     color: var(--color-text);
     font: inherit;
@@ -84,6 +81,7 @@
     display: flex;
     gap: 120px;
     width: max-content;
+    margin: auto;
     padding-left: var(--space-section-x);
     padding-right: var(--space-section-x);
 
@@ -107,10 +105,7 @@
   }
 
   &[hidden] {
-    display: block;
-    @include bp.media-down(lg) {
-      display: none;
-    }
+    display: none;
   }
   &__category {
     margin: 0 0 18px;
