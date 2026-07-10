@@ -5,6 +5,22 @@ export default function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.addFilter("assetUrl", (assetPath) => {
+    if (!assetPath || !assetPath.startsWith("/")) {
+      return assetPath;
+    }
+
+    if (pathPrefix === "/") {
+      return assetPath;
+    }
+
+    const normalizedPathPrefix = pathPrefix.endsWith("/")
+      ? pathPrefix.slice(0, -1)
+      : pathPrefix;
+
+    return `${normalizedPathPrefix}${assetPath}`;
+  });
+
   eleventyConfig.addTransform("pathPrefix", function (content) {
     if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) {
       return content;
