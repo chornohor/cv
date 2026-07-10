@@ -1,7 +1,7 @@
 {% macro projectChallenge(challenge) %}
 	<section class="section section--42-42-0-72">
 		<h2>{{ challenge.title or "Challenge" }}</h2>
-		<p class="mb42">{{ challenge.description | safe }}</p>
+		<p class="key-problems-info">{{ challenge.description | safe }}</p>
 		<h3>{{ challenge.problemsTitle or "Key problems" }}</h3>
 		<div class="key-problems">
 			{% for problem in challenge.problems %}

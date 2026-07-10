@@ -27,7 +27,7 @@
 					<p>{{ project.description }}</p>
 				</div>
 				<img class="feature__image" src="{{ project.image.src }}" alt="{{ project.image.alt or project.trackTitle or project.title | striptags }}">
-				<div class="feature__info ">
+				<div class="feature__info scrollbar-hidden-x">
 					{% for group in project.groups %}
 						<div>
 							<div class="circle-label">

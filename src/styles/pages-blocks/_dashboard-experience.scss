@@ -1,4 +1,10 @@
 @use "../settings/breakpoints" as bp;
+.dashboard-experience-info {
+  margin-bottom: 42px;
+  @include bp.media-down(lg) {
+    text-align: center;
+  }
+}
 .dashboard-experience {
   display: grid;
   grid-template-columns: 1fr 1fr;

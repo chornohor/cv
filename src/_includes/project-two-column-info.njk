@@ -3,7 +3,7 @@
 		<h2>{{ section.title }}</h2>
 		<div class="architecture-block architecture-block--two-col">
 			<div>{{ section.description | safe }}</div>
-			<div class="architecture-block__table">
+			<div class="architecture-block__table scrollbar-hidden-x">
 				{% for group in section.groups %}
 					<div class="architecture-block-item">
 						<b>{{ group.title }}</b>

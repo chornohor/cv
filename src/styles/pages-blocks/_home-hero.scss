@@ -13,9 +13,8 @@
   }
 
   @include bp.media-down(lg) {
+    gap: 42px;
     grid-template-columns: 1fr;
-  }
-  @include bp.media-down(lg) {
     text-align: center;
   }
 }
@@ -56,6 +55,7 @@
   object-fit: cover;
 
   @include bp.media-down(lg) {
-    display: none;
+    max-width: 200px;
+    order: -1;
   }
 }

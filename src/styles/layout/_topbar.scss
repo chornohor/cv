@@ -83,8 +83,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -92,15 +92,15 @@
 
     span {
       position: absolute;
-      height: 3px;
+      height: 2px;
       background: var(--color-text);
       transition:
         transform 180ms ease,
         opacity 180ms ease;
 
       &:first-child {
-        width: 12px;
-        transform: translate(5px, -8px);
+        width: 10px;
+        transform: translate(2px, -6px);
       }
 
       &:nth-child(2) {
@@ -108,8 +108,8 @@
       }
 
       &:last-child {
-        width: 12px;
-        transform: translate(-2px, 8px);
+        width: 10px;
+        transform: translate(-2px, 6px);
       }
     }
 
@@ -121,8 +121,9 @@
 
   .topbar.is-open .topbar__toggle {
     span:first-child {
-      width: 24px;
+      width: 18px;
       transform: rotate(45deg);
+      border-radius: 10px;
     }
 
     span:nth-child(2) {
@@ -130,8 +131,9 @@
     }
 
     span:last-child {
-      width: 24px;
+      width: 18px;
       transform: rotate(-45deg);
+      border-radius: 10px;
     }
   }
 

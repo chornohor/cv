@@ -122,3 +122,15 @@ small {
     min-height: 400px;
   }
 }
+
+.scrollbar-hidden-x {
+  @include bp.media-down(md) {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,4 +1,10 @@
 @use "../settings/breakpoints" as bp;
+.key-problems-info {
+  margin-bottom: 42px;
+  @include bp.media-down(lg) {
+    text-align: left;
+  }
+}
 .key-problems {
   display: grid;
   grid-template-columns: 1fr 1fr;

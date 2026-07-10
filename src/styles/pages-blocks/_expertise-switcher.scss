@@ -47,8 +47,16 @@
   grid-column: 2;
   grid-row: 1 / span 5;
   max-width: 420px;
+  animation: showslow 1s ease;
 }
-
+@keyframes showslow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .expertise-switcher__item.is-active .expertise-switcher__panel {
   display: block;
 }

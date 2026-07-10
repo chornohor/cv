@@ -1,7 +1,7 @@
 {% macro projectDashboardExperience(experience) %}
 	<section class="section section--42-42-0-72">
 		<h2>{{ experience.title }}</h2>
-		<p class="mb42">{{ experience.description | safe }}</p>
+		<p class="dashboard-experience-info">{{ experience.description | safe }}</p>
 		<div class="dashboard-experience {{experience.extraclass}}">
 			<img class="dashboard-experience__block1" src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
 			{% for block in experience.blocks %}
