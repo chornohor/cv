@@ -4,7 +4,7 @@
 		<p class="dashboard-experience-info">{{ experience.description | safe }}</p>
 		<div class="dashboard-experience {{experience.mainclass}}">
 			<div class="dashboard-experience__block1 {{experience.imagespecclass}}">
-				<img class="dashboard-experience__block1" src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
+				<img  src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
 			</div>
 			{% for block in experience.blocks %}
 				<div class="dashboard-experience__block{{ loop.index + 1 }}">

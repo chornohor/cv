@@ -7,6 +7,9 @@
       text-align: center;
     }
   }
+  @include bp.media-down(lg) {
+    text-align: center;
+  }
 }
 .ai-problems {
   display: grid;
@@ -45,7 +48,7 @@
 .ai-solution {
   display: grid;
   grid-template-columns: 470px 1fr;
-  gap: 120px;
+  gap: 154px;
   align-items: center;
 
   @include bp.media-down(xl) {
@@ -86,11 +89,15 @@
   }
   @include bp.media-down(lg) {
     font-weight: 500;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 0;
     gap: 42px 16px;
     & > :last-child {
       grid-column: 1 / -1;
+    }
+    li {
+      max-width: 184px;
     }
   }
 }
@@ -98,23 +105,43 @@
 .ai-integrations {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
-  overflow-x: auto;
+  margin-top: 70px;
+  padding-bottom: 120px;
+  gap: 42px;
   @include bp.media-down(lg) {
     margin-top: 42px;
+    padding-left: 42px;
+    padding-right: 42px;
+    overflow-x: auto;
+    width: calc(100% + calc(var(--space-section-x)) * 2);
+    margin-left: calc(
+      var(--space-section-x) - calc(var(--space-section-x) * 2)
+    );
   }
   & > * {
-    min-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 93px;
+    width: 93px;
+    height: 93px;
+    border-radius: 12px;
+    box-shadow:
+      0 42px 33px 0 rgba(76, 76, 76, 0.05),
+      0 100px 80px 0 rgba(76, 76, 76, 0.07);
   }
   & > *:nth-child(odd) {
-    margin-top: 40px;
+    margin-top: 56px;
+  }
+  img {
+    width: 44px;
   }
 }
 
 //bottom
 .ai-bottom-image {
   height: 480px;
-  background: url("assets/img/ai/bot.jpg"), var(--color-background);
+  background: url("assets/img/ai/bot.webp"), var(--color-background);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -122,7 +149,7 @@
   border-radius: 0 0 24px 24px;
 
   @include bp.media-down(md) {
-    background: url("assets/img/ai/bot-mobile.jpg"), var(--color-background);
+    background: url("assets/img/ai/bot-mobile.webp"), var(--color-background);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

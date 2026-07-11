@@ -103,4 +103,12 @@
       padding-bottom: 0;
     }
   }
+  &--60-42-0-72 {
+    padding-top: 60px;
+    padding-bottom: 42px;
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+  }
 }
