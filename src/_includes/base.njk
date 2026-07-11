@@ -5,10 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		{% set pageTitle = title or site.defaultTitle %}
 		{% set pageDescription = description or site.defaultDescription %}
-		{% set pageSocialTitle = socialTitle or pageTitle + ' | ' + site.name %}
-		{% set pageSocialDescription = socialDescription or pageDescription %}
+		{% set pageSocialTitle = socialTitle or site.socialTitle or pageTitle + ' | ' + site.name %}
+		{% set pageSocialDescription = socialDescription or site.socialDescription or pageDescription %}
 		{% set pageUrl = site.url + (page.url or permalink or '/') %}
-		{% set pageImage = site.url + (image or site.defaultImage) %}
+		{% set pageImage = site.url + (socialImage or site.socialImage or image or site.defaultImage) %}
 		<title>{{ pageTitle }} | {{ site.name }}</title>
 		<meta
       name="description"
