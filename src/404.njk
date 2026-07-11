@@ -1,14 +1,41 @@
 ---
-layout: base.njk
 title: Page not found
 description: The requested page could not be found.
 permalink: /404.html
 robots: noindex, follow
 excludeFromSitemap: true
 ---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>{{ title }} | {{ site.name }}</title>
+		<meta name="description" content="{{ description }}"/>
+		<meta name="robots" content="{{ robots }}"/>
+		<meta name="theme-color" content="#2d2d2d"/>
+		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"/>
+		<link rel="stylesheet" href="/vendor/modern-normalize.css"/>
+		<link rel="stylesheet" href="/styles.css"/>
+	</head>
+	<body class="page-404">
+		<main class="not-found" aria-labelledby="not-found-title">
+			<div class="not-found__brand">Anastasiia</div>
 
-<section class="section section--60-60-0-72 ta-c">
-	<h1 class="mb42">404</h1>
-	<p class="mb42">This page does not exist or has been moved.</p>
-	<a class="button mb42" href="/">Go home</a>
-</section>
+			<nav class="not-found__nav" aria-label="404 navigation">
+				<a class="not-found__nav-link" href="/#projects">Projects</a>
+				<a class="not-found__nav-link" href="/#contacts">Contacts</a>
+			</nav>
+
+			<section class="not-found__content">
+				<h1 class="not-found__title" id="not-found-title">Well That's Disappointing</h1>
+				<p class="not-found__error">Error 404</p>
+				<img class="not-found__image" src="/assets/img/404/404.png" alt="Three meerkats standing together">
+				<a class="not-found__button" href="/" aria-label="Return to the home page">
+					<span>Get me out</span>
+					<img src="/assets/img/404/circle.png" alt="" aria-hidden="true">
+				</a>
+			</section>
+		</main>
+	</body>
+</html>
