@@ -143,9 +143,6 @@
     img {
       width: 22px;
     }
-    &:hover {
-      background: var(--color-accent);
-    }
 
     @include bp.media-down(lg) {
       left: inherit;

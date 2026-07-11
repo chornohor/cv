@@ -12,6 +12,9 @@
 
 .project-overview__text {
   max-width: 430px;
+  @include bp.media-down(lg) {
+    max-width: 100%;
+  }
 }
 
 .project-overview__text p {
@@ -85,6 +88,9 @@
 .project-overview--ec {
   .project-overview__text {
     max-width: 450px;
+    @include bp.media-down(lg) {
+      max-width: 100%;
+    }
   }
   .project-overview__lists {
     grid-template-columns: minmax(190px, 0.7fr) minmax(300px, 1fr);
