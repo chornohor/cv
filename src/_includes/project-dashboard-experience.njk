@@ -2,8 +2,10 @@
 	<section class="section section--42-42-0-72">
 		<h2>{{ experience.title }}</h2>
 		<p class="dashboard-experience-info">{{ experience.description | safe }}</p>
-		<div class="dashboard-experience {{experience.extraclass}}">
-			<img class="dashboard-experience__block1" src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
+		<div class="dashboard-experience {{experience.mainclass}}">
+			<div class="dashboard-experience__block1 {{experience.imagespecclass}}">
+				<img class="dashboard-experience__block1" src="{{ experience.images[0].src }}" alt="{{ experience.images[0].alt or experience.title }}">
+			</div>
 			{% for block in experience.blocks %}
 				<div class="dashboard-experience__block{{ loop.index + 1 }}">
 					<h3>{{ block.title }}</h3>
@@ -14,9 +16,14 @@
 					</ul>
 				</div>
 			{% endfor %}
-			<img class="dashboard-experience__block4 {{experience.imagespecclass}}" src="{{ experience.images[1].src }}" alt="{{ experience.images[1].alt or experience.title }}">
+
+			<div class="dashboard-experience__block4 {{experience.imagespecclass}}">
+				<img src="{{ experience.images[1].src }}" alt="{{ experience.images[1].alt or experience.title }}">
+			</div>
 			{% if experience.extraclass %}
-				<img class="dashboard-experience__block5 {{experience.imagespecclass}}" src="{{ experience.images[2].src }}" alt="{{ experience.images[2].alt or experience.title }}">
+				<div class="dashboard-experience__block5 {{experience.imagespecclass}}">
+					<img src="{{ experience.images[2].src }}" alt="{{ experience.images[2].alt or experience.title }}">
+				</div>
 				{% for block in experience.extrablocks %}
 					<div class="dashboard-experience__block6">
 						<h3>{{ block.title }}</h3>

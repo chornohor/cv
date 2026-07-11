@@ -2,7 +2,7 @@
 
 .project-overview {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 509px);
   gap: 120px;
 }
 
@@ -24,7 +24,7 @@
 
 .project-overview__lists {
   display: grid;
-  grid-template-columns: minmax(140px, 0.7fr) minmax(260px, 1fr);
+  grid-template-columns: minmax(140px, 0.7fr) minmax(300px, 1fr);
   gap: 72px;
   align-self: end;
 }

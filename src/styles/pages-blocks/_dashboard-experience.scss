@@ -56,6 +56,42 @@
       font-size: 20px;
     }
   }
+  &.dashboard-experience--saas {
+    padding-top: 38px;
+    padding-bottom: 36px;
+    gap: 116px 0;
+    .dashboard-experience__block2 {
+      padding-left: 18px;
+    }
+    .dashboard-experience__block3 {
+      padding-left: 72px;
+    }
+    .dashboard-experience__block4 {
+      padding-right: 60px;
+      text-align: right;
+    }
+    img {
+      max-width: 462px;
+    }
+    @include bp.media-down(xl) {
+      gap: 42px;
+      .dashboard-experience__block2 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block3 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block4 {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
   &.dashboard-experience--3 {
     grid-template-areas: "block1 block2" "block3 block4" "block5 block6";
     @include bp.media-down(lg) {

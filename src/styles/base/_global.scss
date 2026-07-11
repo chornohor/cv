@@ -121,6 +121,16 @@ small {
   &--600 {
     min-height: 400px;
   }
+  &--saas {
+    min-height: 336px;
+    height: 336px;
+    object-position: -70px center;
+    margin-bottom: 42px;
+    @include bp.media-down(lg) {
+      margin-bottom: 60px;
+      margin-top: 24px;
+    }
+  }
 }
 
 .scrollbar-hidden-x {
