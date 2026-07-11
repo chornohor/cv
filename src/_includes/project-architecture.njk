@@ -1,8 +1,8 @@
 {% macro projectArchitecture(architecture) %}
 	<section class="section {{ architecture.class or "section--42-42-0-72" }}">
 		<h2>{{ architecture.title or "Architecture" }}</h2>
-		<div class="architecture-block">
-			<div>{{ architecture.description | safe }}</div>
+		<div class="architecture-block {{architecture.pageclass}}">
+			<div class="architecture-block--info">{{ architecture.description | safe }}</div>
 			<div class="architecture-block__table scrollbar-hidden-x">
 				{% for group in architecture.groups %}
 					<div class="architecture-block-item">

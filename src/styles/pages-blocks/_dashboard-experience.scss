@@ -92,6 +92,69 @@
       padding-bottom: 0;
     }
   }
+  &.dashboard-experience--ds {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 42px 0;
+    .dashboard-experience__block1 {
+      img {
+        margin-top: 44px;
+        margin-bottom: 44px;
+        margin-left: 79px;
+      }
+    }
+    .dashboard-experience__block2 {
+      padding-left: 18px;
+      ul {
+        padding-left: 25px;
+        list-style: disc;
+
+        @include bp.media-down(lg) {
+          list-style: none;
+          padding-left: 0;
+        }
+      }
+    }
+    .dashboard-experience__block3 {
+      padding-left: 42px;
+    }
+    .dashboard-experience__block4 {
+      padding-right: 58px;
+      text-align: right;
+      img {
+        max-width: 442px;
+      }
+      @include bp.media-down(lg) {
+        padding-right: 0;
+      }
+    }
+    img {
+      max-width: 400px;
+    }
+    @include bp.media-down(xl) {
+      gap: 42px;
+      .dashboard-experience__block1 {
+        img {
+          margin: 0;
+        }
+      }
+      .dashboard-experience__block2 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block3 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block4 {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
   &.dashboard-experience--3 {
     grid-template-areas: "block1 block2" "block3 block4" "block5 block6";
     @include bp.media-down(lg) {

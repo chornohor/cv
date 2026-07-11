@@ -81,3 +81,13 @@
     margin-top: 18px;
   }
 }
+
+.project-overview--ec {
+  .project-overview__text {
+    max-width: 450px;
+  }
+  .project-overview__lists {
+    grid-template-columns: minmax(190px, 0.7fr) minmax(300px, 1fr);
+    gap: 66px;
+  }
+}

@@ -124,11 +124,33 @@ small {
   &--saas {
     min-height: 336px;
     height: 336px;
-    object-position: -70px center;
     margin-bottom: 42px;
     @include bp.media-down(lg) {
+      object-position: -70px center;
       margin-bottom: 60px;
       margin-top: 24px;
+    }
+  }
+  &--ds1 {
+    min-height: 342px;
+    height: 342px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    @include bp.media-down(lg) {
+      object-position: 0 center;
+      margin-bottom: 72px;
+      margin-top: 12px;
+    }
+  }
+  &--ds2 {
+    min-height: 445px;
+    height: 445px;
+    margin-bottom: 42px;
+    margin-top: 20px;
+    @include bp.media-down(lg) {
+      object-position: -1181px center;
+      margin-bottom: 72px;
+      margin-top: 12px;
     }
   }
 }
@@ -142,5 +164,16 @@ small {
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+}
+.show-mob {
+  display: none;
+  @include bp.media-down(lg) {
+    display: block;
+  }
+}
+.hide-mob {
+  @include bp.media-down(lg) {
+    display: none;
   }
 }

@@ -29,8 +29,9 @@ image: /assets/img/design-system/main.jpg
 </section>
 {% set designSystemArchitecture = {
 	title: "Architecture",
+	pageclass: "architecture-block--ds",
 	class: "section--42-42-0-42",
-	description: "I established design foundations to create consistency across the interface and support future UI decisions.<br><br>Building on these foundations, I created a reusable component library that could scale across multiple products and future features.",
+	description: "I established design foundations <br> to create consistency across the interface and support future UI decisions.<br><br>Building on these foundations, I created a reusable component library that could scale across multiple products and future features.",
 	groups: [
 		{
 			title: "Foundation Layer",
@@ -83,9 +84,11 @@ image: /assets/img/design-system/main.jpg
 	</div>
 </section>
 {{ projectArchitecture(designSystemArchitecture) }}
-<img class="example-img example-img--600" src="/assets/img/design-system/example1.jpg" alt="Example">
+<img class="example-img show-mob example-img--ds1" src="/assets/img/design-system/example2.png" alt="Example">
+<img class="example-img hide-mob example-img--ds1" src="/assets/img/design-system/example1.png" alt="Example">
 {% set saasDashboardExperience = {
 	title: "Form System",
+	mainclass: "dashboard-experience--ds",
 	description: "Forms represent one of the most commonly used interaction patterns across digital products. To improve consistency and usability, I designed a structured form system with standardized validation, interaction states, and reusable patterns.",
 	images: [
 		{
@@ -141,6 +144,7 @@ image: /assets/img/design-system/main.jpg
 </section>
 {% set designSystemDocumentation = {
 	title: "Documentation",
+	class: "section--42-42-24-72",
 	description: "A design system is more than a collection of UI components.<br><br>To ensure adoption across teams, I organized documentation covering component behavior, usage rules, naming conventions, and implementation guidelines.",
 	groups: [
 		{
@@ -182,4 +186,4 @@ image: /assets/img/design-system/main.jpg
 		</div>
 	</div>
 </section>
-<img class="example-img example-img--600" src="/assets/img/design-system/example2.jpg" alt="Example">
+<img class="example-img example-img--ds2" src="/assets/img/design-system/example2.png" alt="Example">

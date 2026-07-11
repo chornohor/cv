@@ -19,7 +19,8 @@
   height: 480px;
   border-radius: 0 0 12px 12px;
   margin-bottom: 42px;
-  background: url("assets/img/design-system/main.jpg"), var(--color-background);
+  background:
+    url("assets/img/design-system/main.webp"), var(--color-background);
   background-size: cover;
   @include bp.media-down(lg) {
     margin-bottom: 24px;
@@ -75,6 +76,7 @@
     font-size: 32px;
     font-family: "Inter", var(--ff-base);
     font-weight: 600;
+    margin-bottom: 12px;
   }
   @include bp.media-down(lg) {
     gap: 42px 38px;
@@ -122,6 +124,7 @@
   margin-bottom: 60px;
   @include bp.media-down(lg) {
     margin-bottom: 42px;
+    text-align: center;
   }
 }
 .design-principles-text {
@@ -148,10 +151,10 @@
   justify-content: flex-start;
   position: relative;
   padding-top: 40px;
+  cursor: pointer;
   transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    color 180ms ease;
+    border-color 0.3s ease,
+    background 0.3s ease;
   &:not(.design-principles-item:first-of-type) {
     margin-left: -50px;
   }
@@ -160,7 +163,6 @@
     font-weight: 500;
     color: var(--color-accent);
     margin-bottom: 60px;
-    transition: color 180ms ease;
   }
   &__title {
     margin-bottom: 12px;
@@ -171,10 +173,6 @@
     transition: opacity 180ms ease;
   }
   &:hover {
-    border-color: var(--color-accent);
-    cursor: pointer;
-  }
-  &--active {
     .design-principles-item__text {
       opacity: 1;
     }

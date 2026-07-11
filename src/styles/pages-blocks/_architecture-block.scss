@@ -47,6 +47,7 @@
     padding: 16px 24px;
     text-align: center;
     min-width: 260px;
+    white-space: normal;
   }
   b {
     font-weight: 700;
@@ -72,5 +73,13 @@
   gap: 9px;
   .architecture-block__table {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.architecture-block--ds {
+  grid-template-columns: 300px 1fr;
+  gap: 55px;
+  @include bp.media-down(lg) {
+    grid-template-columns: 1fr;
   }
 }

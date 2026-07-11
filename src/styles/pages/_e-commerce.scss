@@ -9,6 +9,9 @@
     grid-template-columns: 1fr;
     gap: 42px;
   }
+  @include bp.media-down(xl) {
+    text-align: center;
+  }
 }
 .ec-ux-priorities-title {
   font-size: 24px;
