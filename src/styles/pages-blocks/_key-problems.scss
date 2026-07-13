@@ -33,3 +33,10 @@
     letter-spacing: -2%;
   }
 }
+.key-problems.key-problems--mobile {
+  .key-problems-item {
+    @include bp.media-down(lg) {
+      padding: 16px;
+    }
+  }
+}

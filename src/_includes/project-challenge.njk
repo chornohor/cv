@@ -3,7 +3,7 @@
 		<h2>{{ challenge.title or "Challenge" }}</h2>
 		<p class="key-problems-info">{{ challenge.description | safe }}</p>
 		<h3>{{ challenge.problemsTitle or "Key problems" }}</h3>
-		<div class="key-problems">
+		<div class="key-problems {{challenge.keyclass}}">
 			{% for problem in challenge.problems %}
 				<div class="key-problems-item">
 					<div class="circle-label circle-label--small">

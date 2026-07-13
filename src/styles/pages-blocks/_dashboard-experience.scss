@@ -92,6 +92,39 @@
       padding-bottom: 0;
     }
   }
+  &.dashboard-experience--mobile {
+    padding-top: 36px;
+    padding-bottom: 0;
+    gap: 42px 60px;
+    .dashboard-experience__block3 {
+      padding-left: 43px;
+    }
+    .dashboard-experience__block4 {
+      padding-right: 60px;
+      text-align: right;
+    }
+    img {
+      max-width: 558px;
+    }
+    @include bp.media-down(xl) {
+      gap: 42px;
+      .dashboard-experience__block2 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block3 {
+        padding-left: 0;
+      }
+      .dashboard-experience__block4 {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    @include bp.media-down(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
   &.dashboard-experience--ds {
     padding-top: 0;
     padding-bottom: 0;

@@ -95,3 +95,11 @@
     text-align: center;
   }
 }
+.mobile-des-sys-title {
+  @include bp.media-down(lg) {
+    line-height: 1.5;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

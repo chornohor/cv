@@ -158,6 +158,17 @@ small {
       margin-top: 12px;
     }
   }
+  &--mobile {
+    min-height: 259px;
+    height: 259px;
+    margin-bottom: 42px;
+    margin-top: 62px;
+    @include bp.media-down(lg) {
+      object-position: -704px center;
+      margin-bottom: 72px;
+      margin-top: 0;
+    }
+  }
 }
 
 .scrollbar-hidden-x {

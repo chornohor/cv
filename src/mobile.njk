@@ -85,6 +85,7 @@ image: /assets/img/mobile/top.jpg
 
 {% set projectChallengeData = {
 	title: "Challenge",
+	keyclass: "key-problems--mobile",
 	description: "Traditional banking apps often focus on account management while making secondary services difficult to discover. The challenge was designing an experience that balances frequent actions like checking balances and transferring money with more complex products such as loans and insurance.",
 	problemsTitle: "Key problems",
 	problems: ["Simplifying financial workflows", "Reducing friction in transaction flows", "Making financial products discoverable", "Maintaining user trust"]
@@ -157,14 +158,16 @@ image: /assets/img/mobile/top.jpg
 
 {% set saasDashboardExperience = {
 	title: "Dashboard Experience",
-	imagespecclass: "dashboard-experience-full-image",
+	mainclass: "dashboard-experience--mobile",
 	description: "The dashboard acts as the primary entry point and provides users with a snapshot of their financial situation.",
 	images: [
 		{
 			src: "/assets/img/mobile/de1.png",
+			srcm: "/assets/img/mobile/de1m.png",
 			alt: "Mobile banking dashboard screen"
 		}, {
 			src: "/assets/img/mobile/de2.png",
+			srcm: "/assets/img/mobile/de2m.png",
 			alt: "Mobile banking dashboard detail screen"
 		}
 	],
@@ -188,7 +191,7 @@ image: /assets/img/mobile/top.jpg
 			title: "Feature Deep Dive #1 <br> Money Transfers",
 			description: "Money transfers represent one of the most frequently used banking features. The goal was to create a fast and predictable transfer experience.",
 			image: {
-				src: "/assets/img/mobile/pr1.jpg",
+				src: "/assets/img/mobile/pr1.webp",
 				srcm: "/assets/img/mobile/pr1m.webp",
 				alt: "Mobile financial services feature screen"
 			},
@@ -227,7 +230,7 @@ image: /assets/img/mobile/top.jpg
 			title: "Feature Deep Dive #2 <br>Bank to Bank Transfer",
 			description: "Sending money between banks should be fast and effortless. The flow was designed to simplify transfers through a guided, step-by-step experience with clear confirmation before completion.",
 			image: {
-				src: "/assets/img/mobile/pr2.jpg",
+				src: "/assets/img/mobile/pr2.webp",
 				srcm: "/assets/img/mobile/pr2m.webp",
 				alt: "Mobile insurance purchase feature screen"
 			},
@@ -266,7 +269,7 @@ image: /assets/img/mobile/top.jpg
 			title: "Feature Deep Dive #3 <br> Loan Application Experience",
 			description: "Applying for financial products can be intimidating for users. The goal was to simplify loan discovery and application.",
 			image: {
-				src: "/assets/img/mobile/pr3.jpg",
+				src: "/assets/img/mobile/pr3.webp",
 				srcm: "/assets/img/mobile/pr3m.webp",
 				alt: "Mobile loan application feature screen"
 			},
@@ -308,6 +311,7 @@ image: /assets/img/mobile/top.jpg
 
 {% set designSystemOptimization = {
 	title: "Mobile Design System",
+	titleclass: "mobile-des-sys-title",
 	description: "To ensure consistency across the app, <br> I developed reusable mobile patterns and components.",
 	groups: [
 		{
@@ -322,7 +326,7 @@ image: /assets/img/mobile/top.jpg
 
 {{ projectTwoColumnInfo(designSystemOptimization) }}
 
-<img class="example-img" src="/assets/img/mobile/example1.jpg" alt="Example">
+<img class="example-img example-img--mobile" src="/assets/img/mobile/example1.png" alt="Example">
 
 {% set projectImpactData = {
 	team: [
