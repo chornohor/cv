@@ -40,3 +40,10 @@
     }
   }
 }
+.key-problems.key-problems--ec {
+  .key-problems-item {
+    @include bp.media-down(lg) {
+      padding: 16px 24px;
+    }
+  }
+}

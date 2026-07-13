@@ -195,6 +195,25 @@
   }
   &.dashboard-experience--3 {
     grid-template-areas: "block1 block2" "block3 block4" "block5 block6";
+    gap: 42px 0;
+    .dashboard-experience__block2 {
+      padding-left: 100px;
+      @include bp.media-down(lg) {
+        padding-left: 0;
+      }
+    }
+    .dashboard-experience__block3 {
+      padding-left: 32px;
+      @include bp.media-down(lg) {
+        padding-left: 0;
+      }
+    }
+    .dashboard-experience__block6 {
+      padding-left: 100px;
+      @include bp.media-down(lg) {
+        padding-left: 0;
+      }
+    }
     @include bp.media-down(lg) {
       grid-template-areas: "block2" "block1" "block3" "block4" "block6" "block5";
     }
