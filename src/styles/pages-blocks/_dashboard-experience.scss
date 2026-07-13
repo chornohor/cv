@@ -126,6 +126,11 @@
       }
       @include bp.media-down(lg) {
         padding-right: 0;
+        overflow: hidden;
+        img {
+          width: auto;
+          height: 408px;
+        }
       }
     }
     img {

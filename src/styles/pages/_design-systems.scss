@@ -23,7 +23,7 @@
     url("assets/img/design-system/main.webp"), var(--color-background);
   background-size: cover;
   @include bp.media-down(lg) {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     height: 380px;
   }
   @include bp.media-down(md) {
@@ -43,6 +43,7 @@
     grid-template-columns: 1fr;
     gap: 60px;
     padding: 0;
+    text-align: center;
   }
   h3 {
     margin-bottom: 24px;
@@ -122,9 +123,9 @@
 }
 .dsystem-results-text {
   margin-bottom: 60px;
+  text-align: center;
   @include bp.media-down(lg) {
     margin-bottom: 42px;
-    text-align: center;
   }
 }
 .design-principles-text {
@@ -132,6 +133,8 @@
   text-align: center;
   @include bp.media-down(lg) {
     margin-bottom: 42px;
+    max-width: 250px;
+    margin: 0 auto 60px;
   }
 }
 .design-principles {
@@ -219,5 +222,10 @@
       background-position-x: -894px;
       background-position-y: -44px;
     }
+  }
+}
+.dsystem-toptitle {
+  @include bp.media-down(lg) {
+    font-size: 32px;
   }
 }

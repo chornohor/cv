@@ -46,12 +46,14 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
   margin: 0 0 42px;
+  font-weight: 600;
   @include bp.media-down(lg) {
     text-align: center;
   }
 }
 h4 {
   font-size: var(--fs-h4);
+  font-weight: 600;
 }
 img {
   display: inline-block;
@@ -138,8 +140,10 @@ small {
     margin-top: 60px;
     @include bp.media-down(lg) {
       object-position: 0 center;
-      margin-bottom: 72px;
+      margin-bottom: 112px;
       margin-top: 12px;
+      min-height: 445px;
+      height: 445px;
     }
   }
   &--ds2 {
