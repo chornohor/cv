@@ -24,6 +24,16 @@
   &--outlined {
     background: var(--color-surface);
     color: var(--color-accent);
+  }
+  &--disabled {
+    background: var(--color-surface) !important;
+    color: var(--color-border) !important;
+    border-color: var(--color-border) !important;
     cursor: default !important;
+    &:hover {
+      background: var(--color-surface) !important;
+      color: var(--color-border) !important;
+      border-color: var(--color-border) !important;
+    }
   }
 }

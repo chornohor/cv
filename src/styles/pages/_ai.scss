@@ -77,13 +77,23 @@
     align-items: center;
     line-height: 1;
     gap: 24px;
+    &.ai-solutions__item3 {
+      @include bp.media-down(lg) {
+        max-width: 140px;
+      }
+    }
+    &.ai-solutions__item1 {
+      @include bp.media-down(lg) {
+        max-width: 130px;
+      }
+    }
     @include bp.media-down(lg) {
       flex-direction: column;
       line-height: 130%;
     }
     img {
-      width: 20px;
-      min-width: 20px;
+      width: 22px;
+      min-width: 22px;
       margin-top: -3px;
     }
   }
@@ -92,7 +102,7 @@
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 0;
-    gap: 42px 16px;
+    gap: 42px 11px;
     & > :last-child {
       grid-column: 1 / -1;
     }

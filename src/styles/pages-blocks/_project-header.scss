@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
 
   @include bp.media-down(lg) {
-    background-position: calc(100% + 76px) center;
     background-size: cover;
   }
 }

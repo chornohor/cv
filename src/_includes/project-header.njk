@@ -1,6 +1,7 @@
 {% macro projectHeader(project) %}
 	<section class="section {{ project.sectionclass or "section--24-60-0-72"}}">
-		<div class="project-header-image" style="background-image: url('{{ project.img | assetUrl }}'); {{project.imgstyle or ''}}"></div>
+		<div class="project-header-image hide-mob" style="background-image: url('{{ project.img | assetUrl }}'); {{project.imgstyle or ''}}"></div>
+		<div class="project-header-image show-mob" style="background-image: url('{{ project.imgmobile | assetUrl }}'); {{project.imgstyle or ''}}"></div>
 		<div class="project-header__hero">
 			<div class="project-header__intro">
 				<p>{{ project.eyebrow }}</p>

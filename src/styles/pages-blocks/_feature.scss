@@ -34,8 +34,8 @@
     transition: all 180ms ease;
     cursor: pointer;
     &:hover {
-      background: var(--color-surface);
-      color: var(--color-accent);
+      background: var(--color-accent);
+      color: var(--color-white);
     }
   }
   .circle-label + .circle-label {
