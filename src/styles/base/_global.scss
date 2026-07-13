@@ -124,6 +124,7 @@ small {
     min-height: 400px;
   }
   &--saas {
+    margin-top: 60px;
     min-height: 336px;
     height: 336px;
     margin-bottom: 42px;
@@ -178,6 +179,17 @@ small {
 }
 .hide-mob {
   @include bp.media-down(lg) {
+    display: none;
+  }
+}
+.show-sm {
+  display: none;
+  @include bp.media-down(sm) {
+    display: block;
+  }
+}
+.hide-sm {
+  @include bp.media-down(sm) {
     display: none;
   }
 }

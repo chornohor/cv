@@ -1,6 +1,6 @@
 {% macro projectTwoColumnInfo(section) %}
 	<section class="section {{ section.class or "section--42-42-0-0" }}">
-		<h2>{{ section.title }}</h2>
+		<h2 class="{{section.titleclass}}">{{ section.title }}</h2>
 		<div class="architecture-block architecture-block--two-col">
 			<div class="architecture-block__text">{{ section.description | safe }}</div>
 			<div class="architecture-block__table scrollbar-hidden-x">
