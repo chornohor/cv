@@ -6,8 +6,8 @@
   "themeColor": "#2d2d2d",
   "defaultTitle": "Product Designer Portfolio",
   "defaultDescription": "Product designer portfolio focused on SaaS dashboards, mobile banking apps, e-commerce platforms, AI product concepts, landing pages, and scalable design systems.",
-  "defaultImage": "/assets/img/home/avatar.jpg",
+  "defaultImage": "/assets/img/home/avatar.png",
   "socialTitle": "Anastasia Chornohor",
   "socialDescription": "Product Designer / UX/UI Designer",
-  "socialImage": "/assets/img/home/avatar.jpg"
+  "socialImage": "/assets/img/home/avatar.png"
 }
