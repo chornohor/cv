@@ -14,6 +14,35 @@ document.querySelectorAll("[data-projects-carousel]").forEach((carousel) => {
   let startX = 0;
   let startScrollLeft = 0;
 
+  const startDragging = (clientX) => {
+    isPointerDown = true;
+    isDragging = false;
+    shouldSuppressClick = false;
+    startX = clientX;
+    startScrollLeft = viewport.scrollLeft;
+  };
+
+  const moveDragging = (clientX, event) => {
+    if (!isPointerDown) {
+      return;
+    }
+
+    const distance = clientX - startX;
+
+    if (!isDragging && Math.abs(distance) > 6) {
+      isDragging = true;
+      shouldSuppressClick = true;
+      viewport.classList.add("is-dragging");
+    }
+
+    if (!isDragging) {
+      return;
+    }
+
+    event.preventDefault();
+    viewport.scrollLeft = startScrollLeft - distance;
+  };
+
   const updateProgress = () => {
     if (!progress) {
       return;
@@ -44,37 +73,30 @@ document.querySelectorAll("[data-projects-carousel]").forEach((carousel) => {
   });
 
   viewport.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") {
+      return;
+    }
+
     if (event.button !== 0) {
       return;
     }
 
-    isPointerDown = true;
-    isDragging = false;
-    shouldSuppressClick = false;
-    startX = event.clientX;
-    startScrollLeft = viewport.scrollLeft;
+    startDragging(event.clientX);
   });
 
   viewport.addEventListener("pointermove", (event) => {
-    if (!isPointerDown) {
+    if (event.pointerType === "touch") {
       return;
     }
 
-    const distance = event.clientX - startX;
-
-    if (!isDragging && Math.abs(distance) > 6) {
-      isDragging = true;
-      shouldSuppressClick = true;
-      viewport.classList.add("is-dragging");
-      viewport.setPointerCapture(event.pointerId);
+    if (isPointerDown && !isDragging) {
+      const distance = event.clientX - startX;
+      if (Math.abs(distance) > 6) {
+        viewport.setPointerCapture(event.pointerId);
+      }
     }
 
-    if (!isDragging) {
-      return;
-    }
-
-    event.preventDefault();
-    viewport.scrollLeft = startScrollLeft - distance;
+    moveDragging(event.clientX, event);
   });
 
   const stopDragging = (event) => {
@@ -86,11 +108,35 @@ document.querySelectorAll("[data-projects-carousel]").forEach((carousel) => {
     isDragging = false;
     viewport.classList.remove("is-dragging");
 
-    if (viewport.hasPointerCapture(event.pointerId)) {
+    if (event.pointerId !== undefined && viewport.hasPointerCapture(event.pointerId)) {
       viewport.releasePointerCapture(event.pointerId);
     }
   };
 
+  viewport.addEventListener(
+    "touchstart",
+    (event) => {
+      if (event.touches.length !== 1) {
+        return;
+      }
+
+      startDragging(event.touches[0].clientX);
+    },
+    { passive: true },
+  );
+  viewport.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches.length !== 1) {
+        return;
+      }
+
+      moveDragging(event.touches[0].clientX, event);
+    },
+    { passive: false },
+  );
+  viewport.addEventListener("touchend", stopDragging);
+  viewport.addEventListener("touchcancel", stopDragging);
   viewport.addEventListener("pointerup", stopDragging);
   viewport.addEventListener("pointercancel", stopDragging);
   viewport.addEventListener("dragstart", (event) => event.preventDefault());

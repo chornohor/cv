@@ -66,6 +66,7 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
     touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
       display: none;
